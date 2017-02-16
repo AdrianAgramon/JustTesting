@@ -1,0 +1,35 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+    <fragment
+        android:id="@+id/mapa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <Button
+        android:text="Resuelvo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:id="@+id/resolver"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="31dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distanciaText"
+        android:textColor="@color/cast_libraries_material_featurehighlight_text_body_color"
+        android:layout_alignBaseline="@+id/resolver"
+        android:layout_alignBottom="@+id/resolver"
+        android:layout_toStartOf="@+id/resolver"
+        android:layout_marginEnd="52dp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:textAlignment="center" />
+</RelativeLayout>
