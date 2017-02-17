@@ -13,9 +13,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 
+
 import java.util.Random;
 
 public class MadridActivity extends AppCompatActivity {
+
+    private LatLng coord = new LatLng(39.481106, -0.340987);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,8 @@ public class MadridActivity extends AppCompatActivity {
 
 
 
-        final double[] coord = new double[]{40.2459,  -3.4209};
+
+      //  final double[] coord = new double[]{40.2459,  -3.4209};
 
 
         EuropeActivity.score = 500;
@@ -105,7 +109,9 @@ public class MadridActivity extends AppCompatActivity {
 
         final double[] coord2 = new double[]{40.2459,  -3.4209};
 
+
         resuelvo.setOnClickListener(new View.OnClickListener() {
+            String Madrid = "Madrid";
             @Override
             public void onClick(View view) {
               /**  String resp = respuesta.getText().toString();
@@ -121,9 +127,7 @@ public class MadridActivity extends AppCompatActivity {
                 //startActivity(intent);
 
                 Intent reg = new Intent(MadridActivity.this, MapsActivity.class);
-                Bundle b = new Bundle();
-
-                b.putSerializable("coordenadas", coord);
+                reg.putExtra("city", Madrid);
                 startActivity(reg);
 
 

@@ -25,8 +25,8 @@ public class MapsActivity extends FragmentActivity implements
         OnMapReadyCallback, GoogleMap.OnMapClickListener {
     private GoogleMap mapa;
 
-    private final LatLng objetivo = new LatLng(39.481106, -0.340987);
 
+     LatLng objetivo = new LatLng(0, 0);
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +35,20 @@ public class MapsActivity extends FragmentActivity implements
                 getSupportFragmentManager().findFragmentById(R.id.mapa);
         mapFragment.getMapAsync(this);
 
+
+        String city = getIntent().getExtras().getString("city");
+
+        if (city.equals("Madrid")){
+
+            objetivo = new LatLng(39.481106, -3.40987);
+        }
+
+
         final Button botonDist = (Button) findViewById(R.id.resolver);
         final TextView dist= (TextView) findViewById(R.id.distanciaText);
         botonDist.setOnClickListener(new View.OnClickListener() {
+
+
 
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
