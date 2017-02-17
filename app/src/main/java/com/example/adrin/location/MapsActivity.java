@@ -40,7 +40,7 @@ public class MapsActivity extends FragmentActivity implements
 
         if (city.equals("Madrid")){
 
-            objetivo = new LatLng(39.481106, -3.40987);
+            objetivo = new LatLng(40.4893538421231,-3.6827461557);
         }
 
 
@@ -63,7 +63,7 @@ public class MapsActivity extends FragmentActivity implements
     @Override public void onMapReady(GoogleMap googleMap) {
         mapa = googleMap;
         mapa.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(objetivo, 4));
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(objetivo, 3));
         mapa.setOnMapClickListener(this);
         if (ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.ACCESS_FINE_LOCATION) ==
