@@ -1,9 +1,12 @@
 package com.example.adrin.location;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.icu.text.DecimalFormat;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
@@ -20,13 +23,17 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
+
 
 public class MapsActivity extends FragmentActivity implements
         OnMapReadyCallback, GoogleMap.OnMapClickListener {
+    private static int TIME_OUT = 400;
+    final LatLng start = new LatLng(45.7484600, 4.8467100);
+    LatLng objetivo = new LatLng(0, 0);
+    LatLng Marker2 = new LatLng(0, 0);
+    int i = 1;
     private GoogleMap mapa;
-
-
-     LatLng objetivo = new LatLng(0, 0);
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +43,10 @@ public class MapsActivity extends FragmentActivity implements
         mapFragment.getMapAsync(this);
 
 
-        String city = getIntent().getExtras().getString("city");
+        final double[] coord = getIntent().getExtras().getDoubleArray("coord");
+        final int[] score = {getIntent().getExtras().getInt("Score")};
 
-        if (city.equals("Madrid")){
-
-            objetivo = new LatLng(40.4893538421231,-3.6827461557);
-        }
-
+        objetivo = new LatLng(coord[0],coord[1]);
 
         final Button botonDist = (Button) findViewById(R.id.resolver);
         final TextView dist= (TextView) findViewById(R.id.distanciaText);
@@ -54,8 +58,34 @@ public class MapsActivity extends FragmentActivity implements
             @Override
             public void onClick(View view) {
 
-                dist.setText(" "+(int) CalculationByDistance(objetivo,Marker2));
+                PolylineOptions line = new PolylineOptions().add(objetivo, Marker2)
 
+                        .width(5).color(Color.YELLOW);
+
+                mapa.addPolyline(line);
+
+
+                mapa.addMarker(new MarkerOptions().position(objetivo)
+                        .icon(BitmapDescriptorFactory
+                                .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+                dist.setText(" "+(int) CalculationByDistance(objetivo,Marker2));
+                score[0] = (int) CalculationByDistance(objetivo, Marker2);
+
+                new CountDownTimer(2500, 1000) {
+                    public void onTick(long millisUntilFinished) {
+                    }
+
+                    public void onFinish() {
+
+                        Intent reg = new Intent(MapsActivity.this, CorrectoActivity.class);
+                        reg.putExtra("score", score[0]);
+
+                        startActivity(reg);
+
+                    }
+
+                }.start();
             }
         });
     }
@@ -63,14 +93,16 @@ public class MapsActivity extends FragmentActivity implements
     @Override public void onMapReady(GoogleMap googleMap) {
         mapa = googleMap;
         mapa.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(objetivo, 3));
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(start, 3));
         mapa.setOnMapClickListener(this);
+        mapa.getUiSettings().setMapToolbarEnabled(false);
         if (ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.ACCESS_FINE_LOCATION) ==
                 PackageManager.PERMISSION_GRANTED) {
             mapa.setMyLocationEnabled(true);
-            mapa.getUiSettings().setZoomControlsEnabled(false);
-            mapa.getUiSettings().setCompassEnabled(true);
+            mapa.getUiSettings().setZoomControlsEnabled(true);
+            mapa.getUiSettings().setCompassEnabled(false);
+
         }
 
     }
@@ -91,8 +123,6 @@ public class MapsActivity extends FragmentActivity implements
                 mapa.getCameraPosition().target));
     }
 
-    LatLng Marker2 =new LatLng (0,0);
-    int i =1;
     @Override public void onMapClick(LatLng puntoPulsado) {
 
 
