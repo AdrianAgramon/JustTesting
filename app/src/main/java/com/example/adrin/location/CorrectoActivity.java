@@ -18,11 +18,16 @@ public class CorrectoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_correcto);
 
+        final int partidas = getIntent().getExtras().getInt("Partidas")-1;
+
         TextView puntuacion = (TextView) findViewById(R.id.puntuacionText) ;
+        TextView partRest = (TextView) findViewById(R.id.TextPartidas);
 
        resultado+=getIntent().getExtras().getInt("score");
 
         puntuacion.setText(" "+resultado+" ");
+
+        partRest.setText(""+partidas+"");
 
         Button otra = (Button) findViewById(R.id.restartbutton);
 
@@ -43,6 +48,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Madrid");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -51,6 +57,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Berlin");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -59,6 +66,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Roma");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -67,6 +75,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Paris");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -75,6 +84,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Pompeya");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -83,6 +93,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Valencia");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
 
@@ -92,6 +103,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Venecia");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -100,6 +112,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Dublin");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -107,6 +120,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Praga");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -114,6 +128,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Barcelona");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -121,6 +136,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Londres");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -128,6 +144,7 @@ public class CorrectoActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Basilea");
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;

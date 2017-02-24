@@ -12,13 +12,16 @@ import java.util.Random;
 public class EuropeActivity extends AppCompatActivity {
 
 
-    public static int partidas =5;
+
     public static int score;
     int lastResult = CorrectoActivity.resultado;
     int bestResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_europe);
 
@@ -31,7 +34,15 @@ public class EuropeActivity extends AppCompatActivity {
             bestResult=lastResult;
         }
 
-        
+        int score = 0;
+
+        int min = 1;
+        int max = 12;
+
+        Random r = new Random();
+        int number = r.nextInt(max - min + 1) + min;
+        final String result = String.valueOf(number);
+
 
 
 
@@ -54,13 +65,14 @@ public class EuropeActivity extends AppCompatActivity {
                 int number = r.nextInt(max - min + 1) + min;
                 final String result = String.valueOf(number);
 
+                final int partidas =2;
 
                 switch (result) {
                     case "1": {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Madrid");
-                        // reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -68,7 +80,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Paris");
-                        //  reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -77,7 +89,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Basilea");
-                        //  reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -86,7 +98,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Barcelona");
-                        //  reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -95,7 +107,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Berlin");
-                        // reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;
@@ -104,7 +116,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Dublin");
-                        //   reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
 
@@ -123,7 +135,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Pompeya");
-                        // reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -131,7 +143,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Praga");
-                        //  reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -139,7 +151,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Cuidad", "Valencia");
-                        ///  reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -147,7 +159,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Venecia");
-                        // reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
                         break;
                     }
@@ -155,7 +167,7 @@ public class EuropeActivity extends AppCompatActivity {
 
                         Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
                         reg.putExtra("Ciudad", "Londres");
-                        //  reg.putExtra("Score", score);
+                        reg.putExtra("Partidas", partidas);
                         startActivity(reg);
 
                         break;

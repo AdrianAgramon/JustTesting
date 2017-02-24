@@ -24,6 +24,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.android.gms.vision.text.Text;
 
 
 public class MapsActivity extends FragmentActivity implements
@@ -43,13 +44,16 @@ public class MapsActivity extends FragmentActivity implements
         mapFragment.getMapAsync(this);
 
 
+        final int partidas = getIntent().getExtras().getInt("Partidas");
         final double[] coord = getIntent().getExtras().getDoubleArray("coord");
         final int[] score = {getIntent().getExtras().getInt("Score")};
 
         objetivo = new LatLng(coord[0],coord[1]);
 
+
         final Button botonDist = (Button) findViewById(R.id.resolver);
         final TextView dist= (TextView) findViewById(R.id.distanciaText);
+
         botonDist.setOnClickListener(new View.OnClickListener() {
 
 
@@ -57,6 +61,8 @@ public class MapsActivity extends FragmentActivity implements
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+
+
 
                 int  distancia = (int) CalculationByDistance(objetivo, Marker2);
 
@@ -80,8 +86,10 @@ public class MapsActivity extends FragmentActivity implements
 
                     public void onFinish() {
 
+
                         Intent reg = new Intent(MapsActivity.this, CorrectoActivity.class);
                         reg.putExtra("score", score[0]);
+                        reg.putExtra("Partidas", partidas);
 
                         startActivity(reg);
 
