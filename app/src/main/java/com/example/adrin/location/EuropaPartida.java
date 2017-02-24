@@ -9,6 +9,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.Random;
 
 public class EuropaPartida extends AppCompatActivity {
@@ -35,42 +37,60 @@ public class EuropaPartida extends AppCompatActivity {
 
 
         if (ciudad.equals("Madrid")) {
-            final Bitmap madrid1 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid1);
+          /**  final Bitmap madrid1 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid1);
             final Bitmap madrid2 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid2);
             final Bitmap madrid3 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid3);
             final Bitmap madrid4 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid4);
             final Bitmap madrid5 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid5);
             final Bitmap madrid6 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid6);
             final Bitmap madrid7 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid7);
-            final Bitmap madrid8 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid8);
+            final Bitmap madrid8 = BitmapFactory.decodeResource(getResources(), R.mipmap.madrid8);**/
 
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(madrid1);
+            switch (result) {
+                case "1":
+                    //  otra.setImageBitmap(madrid1);
+                    Picasso.with(getApplicationContext()).load("http://www.madridlimusinas.net/wp-content/uploads/2016/03/madrid-2.jpg").into(otra);
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(madrid2);
+                    break;
+                case "2":
+                    // otra.setImageBitmap(madrid2);
+                    Picasso.with(getApplicationContext()).load("https://d16teuje7e44sv.cloudfront.net/spa/cities/spain/madrid-medium.jpg").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(madrid3);
+                    break;
+                case "3":
+                    // otra.setImageBitmap(madrid3);
+                    Picasso.with(getApplicationContext()).load("http://bstt-madridcourse.com/wp-content/uploads/2012/10/oposiciones-madrid.jpg").into(otra);
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(madrid4);
+                    break;
+                case "4":
+                    // otra.setImageBitmap(madrid4);
+                    Picasso.with(getApplicationContext()).load("https://cache-graphicslib.viator.com/graphicslib/thumbs674x446/22869/SITours/exclusivo-de-viator-acceso-a-primera-hora-al-palacio-real-de-madrid-in-madrid-333728.jpg").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(madrid5);
+                    break;
+                case "5":
+                    // otra.setImageBitmap(madrid5);
+                    Picasso.with(getApplicationContext()).load("http://static.vueling.com/cms/media/1216306/madrid.jpg").into(otra);
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(madrid6);
+                    break;
+                case "6":
+                    //otra.setImageBitmap(madrid6);
+                    Picasso.with(getApplicationContext()).load("https://upload.wikimedia.org/wikipedia/commons/f/f7/CTBA_(Madrid)_36.jpg").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(madrid7);
+                    break;
+                case "7":
+                    //otra.setImageBitmap(madrid7);
+                    Picasso.with(getApplicationContext()).load("https://only-apartments.storage.googleapis.com/web/imgs/city/Madrid_Small.jpg").into(otra);
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(madrid8);
+                    break;
+                case "8":
+                    //otra.setImageBitmap(madrid8);
+                    Picasso.with(getApplicationContext()).load("http://www.luxuryrentalsmadrid.com/blog/wp-content/uploads/2013/08/descubre-madrid-cabecera1.jpg").into(otra);
 
-            } else {
-                System.out.println("ERROR");
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
 
 
@@ -86,32 +106,50 @@ public class EuropaPartida extends AppCompatActivity {
                     final String result = String.valueOf(number);
 
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(madrid1);
+                    switch (result) {
+                        case "1":
+                            //  otra.setImageBitmap(madrid1);
+                            Picasso.with(getApplicationContext()).load("http://www.madridlimusinas.net/wp-content/uploads/2016/03/madrid-2.jpg").into(otra);
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(madrid2);
+                            break;
+                        case "2":
+                            // otra.setImageBitmap(madrid2);
+                            Picasso.with(getApplicationContext()).load("https://d16teuje7e44sv.cloudfront.net/spa/cities/spain/madrid-medium.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(madrid3);
+                            break;
+                        case "3":
+                            // otra.setImageBitmap(madrid3);
+                            Picasso.with(getApplicationContext()).load("http://bstt-madridcourse.com/wp-content/uploads/2012/10/oposiciones-madrid.jpg").into(otra);
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(madrid4);
+                            break;
+                        case "4":
+                            // otra.setImageBitmap(madrid4);
+                            Picasso.with(getApplicationContext()).load("https://cache-graphicslib.viator.com/graphicslib/thumbs674x446/22869/SITours/exclusivo-de-viator-acceso-a-primera-hora-al-palacio-real-de-madrid-in-madrid-333728.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(madrid5);
+                            break;
+                        case "5":
+                            // otra.setImageBitmap(madrid5);
+                            Picasso.with(getApplicationContext()).load("http://static.vueling.com/cms/media/1216306/madrid.jpg").into(otra);
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(madrid6);
+                            break;
+                        case "6":
+                            //otra.setImageBitmap(madrid6);
+                            Picasso.with(getApplicationContext()).load("https://upload.wikimedia.org/wikipedia/commons/f/f7/CTBA_(Madrid)_36.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(madrid7);
+                            break;
+                        case "7":
+                            //otra.setImageBitmap(madrid7);
+                            Picasso.with(getApplicationContext()).load("https://only-apartments.storage.googleapis.com/web/imgs/city/Madrid_Small.jpg").into(otra);
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(madrid8);
+                            break;
+                        case "8":
+                            //otra.setImageBitmap(madrid8);
+                            Picasso.with(getApplicationContext()).load("http://www.luxuryrentalsmadrid.com/blog/wp-content/uploads/2013/08/descubre-madrid-cabecera1.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
 
                 }
@@ -134,45 +172,54 @@ public class EuropaPartida extends AppCompatActivity {
             });
 
         } else if (ciudad.equals("Berlin")) {
-            // case "Berlin":
 
 
-            final Bitmap berlin1 = BitmapFactory.decodeResource(getResources(), R.mipmap.ber1);
-            final Bitmap berlin2 = BitmapFactory.decodeResource(getResources(), R.mipmap.ber2);
-            final Bitmap berlin3 = BitmapFactory.decodeResource(getResources(), R.mipmap.ber3);
-            final Bitmap berlin4 = BitmapFactory.decodeResource(getResources(), R.mipmap.ber4);
-            final Bitmap berlin5 = BitmapFactory.decodeResource(getResources(), R.mipmap.ber5);
-            final Bitmap berlin6 = BitmapFactory.decodeResource(getResources(), R.mipmap.ber6);
-            final Bitmap berlin7 = BitmapFactory.decodeResource(getResources(), R.mipmap.ber7);
-            final Bitmap berlin8 = BitmapFactory.decodeResource(getResources(), R.mipmap.ber8);
+            switch (result) {
+                case "1":
+                    //  otra.setImageBitmap(madrid1);
+                    Picasso.with(getApplicationContext()).load("http://goandatraveler.com/wp-content/uploads/2016/10/berlin3.jpg").into(otra);
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(berlin1);
+                    break;
+                case "2":
+                    // otra.setImageBitmap(madrid2);
+                    Picasso.with(getApplicationContext()).load("https://cdn.getyourguide.com/niwziy2l9cvz/3Nl5nGC5fq2CQ0O42awIwq/0cff0ba6cc53c2e0f9c153e820fcc8d0/berlin-Brandenburg-Gate-1112x630.jpg").into(otra);
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(berlin2);
+                    break;
+                case "3":
+                    // otra.setImageBitmap(madrid3);
+                    Picasso.with(getApplicationContext()).load("https://www.riu.com/es/binaris/BERLIN%20002D-11-1_tcm49-84457.jpg").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(berlin3);
+                    break;
+                case "4":
+                    // otra.setImageBitmap(madrid4);
+                    Picasso.with(getApplicationContext()).load("http://www.schoenenurlaub.com/wp-content/uploads/2016/01/Berlin-12.jpg").into(otra);
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(berlin4);
+                    break;
+                case "5":
+                    // otra.setImageBitmap(madrid5);
+                    Picasso.with(getApplicationContext()).load("http://assets.fodors.com/destinations/28/christmas-market-berlin-germany-europe_main.jpg").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(berlin5);
+                    break;
+                case "6":
+                    //otra.setImageBitmap(madrid6);
+                    Picasso.with(getApplicationContext()).load("http://www.travelgeekery.com/wp-content/uploads/2015/02/Reichstag.jpg").into(otra);
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(berlin6);
+                    break;
+                case "7":
+                    //otra.setImageBitmap(madrid7);
+                    Picasso.with(getApplicationContext()).load("https://www.sixt.es/fileadmin/user_upload/pictures-city-page/berlin-city-molecule-man.jpg").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(berlin7);
+                    break;
+                case "8":
+                    //otra.setImageBitmap(madrid8);
+                    Picasso.with(getApplicationContext()).load("http://4.bp.blogspot.com/-TwLl-8GUbdw/UzDpR7Nnn_I/AAAAAAAAI2M/cWZ_9W9Fqs8/s1600/The+Socialist+Fraternal+Kiss+between+Leonid+Brezhnev+and+Erich+Honecker+1979+2.jpg").into(otra);
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(berlin8);
-
-            } else {
-                System.out.println("ERROR");
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
+
 
             otra.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -186,32 +233,50 @@ public class EuropaPartida extends AppCompatActivity {
                     final String result = String.valueOf(number);
 
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(berlin1);
+                    switch (result) {
+                        case "1":
+                            //  otra.setImageBitmap(madrid1);
+                            Picasso.with(getApplicationContext()).load("http://goandatraveler.com/wp-content/uploads/2016/10/berlin3.jpg").into(otra);
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(berlin2);
+                            break;
+                        case "2":
+                            // otra.setImageBitmap(madrid2);
+                            Picasso.with(getApplicationContext()).load("https://cdn.getyourguide.com/niwziy2l9cvz/3Nl5nGC5fq2CQ0O42awIwq/0cff0ba6cc53c2e0f9c153e820fcc8d0/berlin-Brandenburg-Gate-1112x630.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(berlin3);
+                            break;
+                        case "3":
+                            // otra.setImageBitmap(madrid3);
+                            Picasso.with(getApplicationContext()).load("https://www.riu.com/es/binaris/BERLIN%20002D-11-1_tcm49-84457.jpg").into(otra);
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(berlin4);
+                            break;
+                        case "4":
+                            // otra.setImageBitmap(madrid4);
+                            Picasso.with(getApplicationContext()).load("http://www.schoenenurlaub.com/wp-content/uploads/2016/01/Berlin-12.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(berlin5);
+                            break;
+                        case "5":
+                            // otra.setImageBitmap(madrid5);
+                            Picasso.with(getApplicationContext()).load("http://assets.fodors.com/destinations/28/christmas-market-berlin-germany-europe_main.jpg").into(otra);
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(berlin6);
+                            break;
+                        case "6":
+                            //otra.setImageBitmap(madrid6);
+                            Picasso.with(getApplicationContext()).load("http://www.travelgeekery.com/wp-content/uploads/2015/02/Reichstag.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(berlin7);
+                            break;
+                        case "7":
+                            //otra.setImageBitmap(madrid7);
+                            Picasso.with(getApplicationContext()).load("https://www.sixt.es/fileadmin/user_upload/pictures-city-page/berlin-city-molecule-man.jpg").into(otra);
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(berlin8);
+                            break;
+                        case "8":
+                            //otra.setImageBitmap(madrid8);
+                            Picasso.with(getApplicationContext()).load("http://4.bp.blogspot.com/-TwLl-8GUbdw/UzDpR7Nnn_I/AAAAAAAAI2M/cWZ_9W9Fqs8/s1600/The+Socialist+Fraternal+Kiss+between+Leonid+Brezhnev+and+Erich+Honecker+1979+2.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
                 }
             });
@@ -234,42 +299,51 @@ public class EuropaPartida extends AppCompatActivity {
 
         } else if (ciudad.equals("Basilea")) {
 
-            final Bitmap basel1 = BitmapFactory.decodeResource(getResources(), R.mipmap.basel1);
-            final Bitmap basel2 = BitmapFactory.decodeResource(getResources(), R.mipmap.basel2);
-            final Bitmap basel3 = BitmapFactory.decodeResource(getResources(), R.mipmap.basel3);
-            final Bitmap basel4 = BitmapFactory.decodeResource(getResources(), R.mipmap.basel4);
-            final Bitmap basel5 = BitmapFactory.decodeResource(getResources(), R.mipmap.basel5);
-            final Bitmap basel6 = BitmapFactory.decodeResource(getResources(), R.mipmap.basel6);
-            final Bitmap basel7 = BitmapFactory.decodeResource(getResources(), R.mipmap.basel7);
-            final Bitmap basel8 = BitmapFactory.decodeResource(getResources(), R.mipmap.basel8);
 
+            switch (result) {
+                case "1":
+                    //  otra.setImageBitmap(madrid1);
+                    Picasso.with(getApplicationContext()).load("https://s-media-cache-ak0.pinimg.com/736x/a0/98/be/a098beba1d6ec003a86e7de7ea78e023.jpg").into(otra);
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(basel1);
+                    break;
+                case "2":
+                    // otra.setImageBitmap(madrid2);
+                    Picasso.with(getApplicationContext()).load("http://img.myswitzerland.com/mys/n49450/images/buehne/basel_winter_650x365_2.jpg").into(otra);
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(basel2);
+                    break;
+                case "3":
+                    // otra.setImageBitmap(madrid3);
+                    Picasso.with(getApplicationContext()).load("http://files.newsnetz.ch/story/1/6/1/16107042/4/topelement.jpg").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(basel3);
+                    break;
+                case "4":
+                    // otra.setImageBitmap(madrid4);
+                    Picasso.with(getApplicationContext()).load("https://upload.wikimedia.org/wikipedia/commons/6/6d/Basel_SBB,_Bahnhof.jpg").into(otra);
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(basel4);
+                    break;
+                case "5":
+                    // otra.setImageBitmap(madrid5);
+                    Picasso.with(getApplicationContext()).load("http://media.biocalorimetry.org/2015/11/luftaufnahme_01_Basel.jpg").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(basel5);
+                    break;
+                case "6":
+                    //otra.setImageBitmap(madrid6);
+                    Picasso.with(getApplicationContext()).load("https://www.fcb.ch/getmedia/de945923-6f3c-4894-a7cc-d51a4d0f0d99/fcbasel").into(otra);
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(basel6);
+                    break;
+                case "7":
+                    //otra.setImageBitmap(madrid7);
+                    Picasso.with(getApplicationContext()).load("http://fminside.net/uploads/monthly_2016_04/basel-logo.png.0c977527e0a0097778e2ab9893b10fc3.png").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(basel7);
+                    break;
+                case "8":
+                    //otra.setImageBitmap(madrid8);
+                    Picasso.with(getApplicationContext()).load("http://www.roche.com/dam/jcr:7e8de406-d8fc-492c-a005-ddde60d64048/en/bau1_aussen_370px.jpg").into(otra);
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(basel8);
-
-            } else {
-                System.out.println("ERROR");
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
 
 
@@ -284,33 +358,52 @@ public class EuropaPartida extends AppCompatActivity {
                     int number = r.nextInt(max - min + 1) + min;
                     final String result = String.valueOf(number);
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(basel1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(basel2);
+                            Picasso.with(getApplicationContext()).load("https://s-media-cache-ak0.pinimg.com/736x/a0/98/be/a098beba1d6ec003a86e7de7ea78e023.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(basel3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(basel4);
+                            Picasso.with(getApplicationContext()).load("http://img.myswitzerland.com/mys/n49450/images/buehne/basel_winter_650x365_2.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(basel5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(basel6);
+                            Picasso.with(getApplicationContext()).load("http://files.newsnetz.ch/story/1/6/1/16107042/4/topelement.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(basel7);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(basel8);
+                            Picasso.with(getApplicationContext()).load("https://upload.wikimedia.org/wikipedia/commons/6/6d/Basel_SBB,_Bahnhof.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        case "5":
+
+                            Picasso.with(getApplicationContext()).load("http://media.biocalorimetry.org/2015/11/luftaufnahme_01_Basel.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("https://www.fcb.ch/getmedia/de945923-6f3c-4894-a7cc-d51a4d0f0d99/fcbasel").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("http://fminside.net/uploads/monthly_2016_04/basel-logo.png.0c977527e0a0097778e2ab9893b10fc3.png").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("http://www.roche.com/dam/jcr:7e8de406-d8fc-492c-a005-ddde60d64048/en/bau1_aussen_370px.jpg").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
+
 
                 }
             });
@@ -334,43 +427,52 @@ public class EuropaPartida extends AppCompatActivity {
         } else if (ciudad.equals("Barcelona")) {
 
 
-            final Bitmap barcelona1 = BitmapFactory.decodeResource(getResources(), R.mipmap.bar1);
-            final Bitmap barcelona2 = BitmapFactory.decodeResource(getResources(), R.mipmap.bar2);
-            final Bitmap barcelona3 = BitmapFactory.decodeResource(getResources(), R.mipmap.bar3);
-            final Bitmap barcelona4 = BitmapFactory.decodeResource(getResources(), R.mipmap.bar4);
-            final Bitmap barcelona5 = BitmapFactory.decodeResource(getResources(), R.mipmap.bar5);
-            final Bitmap barcelona6 = BitmapFactory.decodeResource(getResources(), R.mipmap.bar6);
-            final Bitmap barcelona7 = BitmapFactory.decodeResource(getResources(), R.mipmap.bar7);
-            final Bitmap barcelona8 = BitmapFactory.decodeResource(getResources(), R.mipmap.bar8);
+            switch (result) {
+                case "1":
 
+                    Picasso.with(getApplicationContext()).load("http://cdn.traveler.es/uploads/images/thumbs/201144/barcelona_3771_966x.jpg").into(otra);
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(barcelona1);
+                    break;
+                case "2":
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(barcelona2);
+                    Picasso.with(getApplicationContext()).load("http://www.enforex.com/images/fichas/barcelona/ciudad-barcelona-3.jpg").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(barcelona3);
+                    break;
+                case "3":
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(barcelona4);
+                    Picasso.with(getApplicationContext()).load("https://www.skyscanner.es/static/sites/default/files/spain-catalonia-barcelona-sagrada-familia-519536461_0.jpg").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(barcelona5);
+                    break;
+                case "4":
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(barcelona6);
+                    Picasso.with(getApplicationContext()).load("https://travelinvision.com/resources/img/experiences_gallery/8c35ed29466560cb4b8d933c1d492d19.png").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(barcelona7);
+                    break;
+                case "5":
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(barcelona8);
+                    Picasso.with(getApplicationContext()).load("https://cdn.civitatis.com/guias/barcelona/fotos/hoteles-barcelona-hotel-w.jpg").into(otra);
 
-            } else {
-                System.out.println("ERROR");
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("http://www.barcelonabook.com/uploads/9/2/8/1/9281695/5823663_orig.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://images.trvl-media.com/media/content/shared/images/travelguides/destination/179992/Barcelona-52305.jpg").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("http://www.qtorb.com/wp-content/uploads/barcelona-intensa.jpg").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
+
 
 
             otra.setOnClickListener(new View.OnClickListener() {
@@ -385,32 +487,50 @@ public class EuropaPartida extends AppCompatActivity {
                     final String result = String.valueOf(number);
 
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(barcelona1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(barcelona2);
+                            Picasso.with(getApplicationContext()).load("http://cdn.traveler.es/uploads/images/thumbs/201144/barcelona_3771_966x.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(barcelona3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(barcelona4);
+                            Picasso.with(getApplicationContext()).load("http://www.enforex.com/images/fichas/barcelona/ciudad-barcelona-3.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(barcelona5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(barcelona6);
+                            Picasso.with(getApplicationContext()).load("https://www.skyscanner.es/static/sites/default/files/spain-catalonia-barcelona-sagrada-familia-519536461_0.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(barcelona7);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(barcelona8);
+                            Picasso.with(getApplicationContext()).load("https://travelinvision.com/resources/img/experiences_gallery/8c35ed29466560cb4b8d933c1d492d19.png").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        case "5":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.civitatis.com/guias/barcelona/fotos/hoteles-barcelona-hotel-w.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("http://www.barcelonabook.com/uploads/9/2/8/1/9281695/5823663_orig.jpg").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("https://images.trvl-media.com/media/content/shared/images/travelguides/destination/179992/Barcelona-52305.jpg").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("http://www.qtorb.com/wp-content/uploads/barcelona-intensa.jpg").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
                 }
             });
@@ -434,42 +554,52 @@ public class EuropaPartida extends AppCompatActivity {
 
         } else if (ciudad.equals("Dublin")) {
 
-            final Bitmap dublin1 = BitmapFactory.decodeResource(getResources(), R.mipmap.dub1);
-            final Bitmap dublin2 = BitmapFactory.decodeResource(getResources(), R.mipmap.dub2);
-            final Bitmap dublin3 = BitmapFactory.decodeResource(getResources(), R.mipmap.dub3);
-            final Bitmap dublin4 = BitmapFactory.decodeResource(getResources(), R.mipmap.dub4);
-            final Bitmap dublin5 = BitmapFactory.decodeResource(getResources(), R.mipmap.dub5);
-            final Bitmap dublin6 = BitmapFactory.decodeResource(getResources(), R.mipmap.dub6);
-            final Bitmap dublin7 = BitmapFactory.decodeResource(getResources(), R.mipmap.dub7);
-            final Bitmap dublin8 = BitmapFactory.decodeResource(getResources(), R.mipmap.dub8);
 
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(dublin1);
+            switch (result) {
+                case "1":
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(dublin2);
+                    Picasso.with(getApplicationContext()).load("https://lonelyplanetimages.imgix.net/mastheads/stock-photo-temple-bar-district-in-dublin-at-night-100904953%20.jpg?sharp=10&vib=20&w=1200").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(dublin3);
+                    break;
+                case "2":
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(dublin4);
+                    Picasso.with(getApplicationContext()).load("https://cdn.civitatis.com/guias/dublin/fotos/dublin-four-courts.jpg").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(dublin5);
+                    break;
+                case "3":
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(dublin6);
+                    Picasso.with(getApplicationContext()).load("http://mevoyalmundo.com/wp-content/uploads/2015/05/dublin-low-cost.jpg").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(dublin7);
+                    break;
+                case "4":
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(dublin8);
+                    Picasso.with(getApplicationContext()).load("http://www.mevoyadublin.com/hs-fs/hubfs/citywallpaperhd.com-265.jpg?t=1487351588668&width=2127&name=citywallpaperhd.com-265.jpg").into(otra);
 
-            } else {
-                System.out.println("ERROR");
+                    break;
+                case "5":
+
+                    Picasso.with(getApplicationContext()).load("http://www.turismodigital.com/fotos/dublin-en-24-horas-3-121.jpg").into(otra);
+
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cache-graphicslib.viator.com/graphicslib/thumbs674x446/5299/SITours/excursi-n-de-un-d-a-a-belfast-desde-dubl-n-in-dublin-49330.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://i2.wp.com/instaireland.ie/wp-content/uploads/2016/02/the-oldest-pub-in-dublin.jpg").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("http://s2.pic4you.ru/allimage/y2013/03-10/12216/3233016.png").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
 
 
@@ -485,32 +615,50 @@ public class EuropaPartida extends AppCompatActivity {
                     final String result = String.valueOf(number);
 
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(dublin1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(dublin2);
+                            Picasso.with(getApplicationContext()).load("https://lonelyplanetimages.imgix.net/mastheads/stock-photo-temple-bar-district-in-dublin-at-night-100904953%20.jpg?sharp=10&vib=20&w=1200").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(dublin3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(dublin4);
+                            Picasso.with(getApplicationContext()).load("https://cdn.civitatis.com/guias/dublin/fotos/dublin-four-courts.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(dublin5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(dublin6);
+                            Picasso.with(getApplicationContext()).load("http://mevoyalmundo.com/wp-content/uploads/2015/05/dublin-low-cost.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(dublin7);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(dublin8);
+                            Picasso.with(getApplicationContext()).load("http://www.mevoyadublin.com/hs-fs/hubfs/citywallpaperhd.com-265.jpg?t=1487351588668&width=2127&name=citywallpaperhd.com-265.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        case "5":
+
+                            Picasso.with(getApplicationContext()).load("http://www.turismodigital.com/fotos/dublin-en-24-horas-3-121.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("https://cache-graphicslib.viator.com/graphicslib/thumbs674x446/5299/SITours/excursi-n-de-un-d-a-a-belfast-desde-dubl-n-in-dublin-49330.jpg").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("https://i2.wp.com/instaireland.ie/wp-content/uploads/2016/02/the-oldest-pub-in-dublin.jpg").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("http://s2.pic4you.ru/allimage/y2013/03-10/12216/3233016.png").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
 
                 }
@@ -534,42 +682,52 @@ public class EuropaPartida extends AppCompatActivity {
 
         } else if (ciudad.equals("Londres")) {
 
-            final Bitmap london1 = BitmapFactory.decodeResource(getResources(), R.mipmap.lon1);
-            final Bitmap london2 = BitmapFactory.decodeResource(getResources(), R.mipmap.lon2);
-            final Bitmap london3 = BitmapFactory.decodeResource(getResources(), R.mipmap.lon3);
-            final Bitmap london4 = BitmapFactory.decodeResource(getResources(), R.mipmap.lon4);
-            final Bitmap london5 = BitmapFactory.decodeResource(getResources(), R.mipmap.lon5);
-            final Bitmap london6 = BitmapFactory.decodeResource(getResources(), R.mipmap.lon6);
-            final Bitmap london7 = BitmapFactory.decodeResource(getResources(), R.mipmap.lon7);
-            final Bitmap london8 = BitmapFactory.decodeResource(getResources(), R.mipmap.lon8);
 
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(london1);
+            switch (result) {
+                case "1":
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(london2);
+                    Picasso.with(getApplicationContext()).load("http://www.cambiandoelrumbo.com/wp-content/uploads/2013/08/londres.jpg").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(london3);
+                    break;
+                case "2":
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(london4);
+                    Picasso.with(getApplicationContext()).load("http://trucoslondres.com/wp-content/themes/trucoslondres/assets/images/trucoslondres-fondo.png").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(london5);
+                    break;
+                case "3":
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(london6);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/11/05/19/12/urban-205986_960_720.jpg").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(london7);
+                    break;
+                case "4":
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(london8);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/02/27/16/08/household-cavalry-soldier-275949_960_720.jpg").into(otra);
 
-            } else {
-                System.out.println("ERROR");
+                    break;
+                case "5":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/03/27/20/57/blue-sky-1284254_960_720.jpg").into(otra);
+
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/26/13/30/london-1932126_960_720.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/10/31/14/09/phone-booth-203492_960_720.jpg").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/26/13/28/taxi-1932107_960_720.jpg").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
 
             otra.setOnClickListener(new View.OnClickListener() {
@@ -583,32 +741,50 @@ public class EuropaPartida extends AppCompatActivity {
                     int number = r.nextInt(max - min + 1) + min;
                     final String result = String.valueOf(number);
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(london1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(london2);
+                            Picasso.with(getApplicationContext()).load("http://www.cambiandoelrumbo.com/wp-content/uploads/2013/08/londres.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(london3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(london4);
+                            Picasso.with(getApplicationContext()).load("http://trucoslondres.com/wp-content/themes/trucoslondres/assets/images/trucoslondres-fondo.png").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(london5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(london6);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/11/05/19/12/urban-205986_960_720.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(london7);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(london8);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/02/27/16/08/household-cavalry-soldier-275949_960_720.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        case "5":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/03/27/20/57/blue-sky-1284254_960_720.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/26/13/30/london-1932126_960_720.jpg").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/10/31/14/09/phone-booth-203492_960_720.jpg").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/26/13/28/taxi-1932107_960_720.jpg").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
                 }
             });
@@ -631,46 +807,51 @@ public class EuropaPartida extends AppCompatActivity {
 
         } else if (ciudad.equals("Paris")) {
 
-            final Bitmap paris1 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris1);
-            final Bitmap paris2 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris2);
-            final Bitmap paris3 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris3);
-            final Bitmap paris4 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris4);
-            final Bitmap paris5 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris5);
-            final Bitmap paris6 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris6);
-            final Bitmap paris7 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris7);
-            final Bitmap paris8 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris8);
-            final Bitmap paris9 = BitmapFactory.decodeResource(getResources(), R.mipmap.paris9);
 
+            switch (result) {
+                case "1":
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(paris1);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/04/11/19/46/louvre-102840_960_720.jpg").into(otra);
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(paris2);
+                    break;
+                case "2":
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(paris3);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/18/19/01/paris-1836415_960_720.jpg").into(otra);
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(paris4);
+                    break;
+                case "3":
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(paris5);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/02/07/21/54/palace-79213_960_720.jpg").into(otra);
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(paris6);
+                    break;
+                case "4":
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(paris7);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/03/27/18/24/arc-de-triomphe-1283422_960_720.jpg").into(otra);
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(paris8);
+                    break;
+                case "5":
 
-            } else if (result.equals("9")) {
-                otra.setImageBitmap(paris9);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/02/19/10/46/triumphal-arc-1209394_960_720.jpg").into(otra);
 
-            } else {
-                System.out.println("ERROR");
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/23/00/39/architecture-1851496_960_720.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/18/16/00/architecture-1835516_960_720.jpg").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/06/24/18/54/sacred-140963_960_720.jpg").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
 
             otra.setOnClickListener(new View.OnClickListener() {
@@ -685,35 +866,50 @@ public class EuropaPartida extends AppCompatActivity {
                     final String result = String.valueOf(number);
 
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(paris1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(paris2);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/04/11/19/46/louvre-102840_960_720.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(paris3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(paris4);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/18/19/01/paris-1836415_960_720.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(paris5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(paris6);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/02/07/21/54/palace-79213_960_720.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(paris7);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(paris8);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/03/27/18/24/arc-de-triomphe-1283422_960_720.jpg").into(otra);
 
-                    } else if (result.equals("9")) {
-                        otra.setImageBitmap(paris9);
+                            break;
+                        case "5":
 
-                    } else {
-                        System.out.println("ERROR");
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/02/19/10/46/triumphal-arc-1209394_960_720.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/23/00/39/architecture-1851496_960_720.jpg").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/18/16/00/architecture-1835516_960_720.jpg").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/06/24/18/54/sacred-140963_960_720.jpg").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
                 }
             });
@@ -737,42 +933,50 @@ public class EuropaPartida extends AppCompatActivity {
 
         } else if (ciudad.equals("Pompeya")) {
 
-            final Bitmap pompeya1 = BitmapFactory.decodeResource(getResources(), R.mipmap.pom1);
-            final Bitmap pompeya2 = BitmapFactory.decodeResource(getResources(), R.mipmap.pom2);
-            final Bitmap pompeya3 = BitmapFactory.decodeResource(getResources(), R.mipmap.pom3);
-            final Bitmap pompeya4 = BitmapFactory.decodeResource(getResources(), R.mipmap.pom4);
-            final Bitmap pompeya5 = BitmapFactory.decodeResource(getResources(), R.mipmap.pom5);
-            final Bitmap pompeya6 = BitmapFactory.decodeResource(getResources(), R.mipmap.pom6);
-            final Bitmap pompeya7 = BitmapFactory.decodeResource(getResources(), R.mipmap.pom7);
-            final Bitmap pompeya8 = BitmapFactory.decodeResource(getResources(), R.mipmap.pom8);
+            switch (result) {
+                case "1":
 
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/09/04/21/33/portrait-922764_960_720.jpg").into(otra);
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(pompeya1);
+                    break;
+                case "2":
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(pompeya2);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/03/02/18/22/pompeii-656357_960_720.jpg").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(pompeya3);
+                    break;
+                case "3":
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(pompeya4);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/02/23/16/54/italy-1218073_960_720.jpg").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(pompeya5);
+                    break;
+                case "4":
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(pompeya6);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/05/17/06/italy-1955835_960_720.jpg").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(pompeya7);
+                    break;
+                case "5":
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(pompeya8);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/02/01/20/32/pompeii-620269_960_720.jpg").into(otra);
 
-            } else {
-                System.out.println("ERROR");
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/08/30/12/00/pompeii-431577_960_720.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2010/12/01/columnar-770_960_720.jpg").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/01/27/19/09/pompeii-253364_960_720.jpg").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
 
             otra.setOnClickListener(new View.OnClickListener() {
@@ -786,33 +990,51 @@ public class EuropaPartida extends AppCompatActivity {
                     int number = r.nextInt(max - min + 1) + min;
                     final String result = String.valueOf(number);
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(pompeya1);
+                    switch (result) {
+                    case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(pompeya2);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/09/04/21/33/portrait-922764_960_720.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(pompeya3);
+                    break;
+                    case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(pompeya4);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/03/02/18/22/pompeii-656357_960_720.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(pompeya5);
+                    break;
+                    case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(pompeya6);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/02/23/16/54/italy-1218073_960_720.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(pompeya7);
+                    break;
+                    case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(pompeya8);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/05/17/06/italy-1955835_960_720.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
-                    }
+                    break;
+                    case "5":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/02/01/20/32/pompeii-620269_960_720.jpg").into(otra);
+
+                    break;
+                    case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/08/30/12/00/pompeii-431577_960_720.jpg").into(otra);
+
+                    break;
+                    case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2010/12/01/columnar-770_960_720.jpg").into(otra);
+
+                    break;
+                    case "8":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/01/27/19/09/pompeii-253364_960_720.jpg").into(otra);
+
+                    break;
+                    default:
+                    System.out.println("ERROR");
+                    break;
+                }
                 }
             });
 
@@ -834,42 +1056,50 @@ public class EuropaPartida extends AppCompatActivity {
 
         } else if (ciudad.equals("Praga")) {
 
-            final Bitmap praga1 = BitmapFactory.decodeResource(getResources(), R.mipmap.pra1);
-            final Bitmap praga2 = BitmapFactory.decodeResource(getResources(), R.mipmap.pra2);
-            final Bitmap praga3 = BitmapFactory.decodeResource(getResources(), R.mipmap.pra3);
-            final Bitmap praga4 = BitmapFactory.decodeResource(getResources(), R.mipmap.pra4);
-            final Bitmap praga5 = BitmapFactory.decodeResource(getResources(), R.mipmap.pra5);
-            final Bitmap praga6 = BitmapFactory.decodeResource(getResources(), R.mipmap.pra6);
-            final Bitmap praga7 = BitmapFactory.decodeResource(getResources(), R.mipmap.pra7);
-            final Bitmap praga8 = BitmapFactory.decodeResource(getResources(), R.mipmap.pra8);
+            switch (result) {
+                case "1":
 
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/03/25/19/00/czech-republic-1279425_960_720.jpg").into(otra);
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(praga1);
+                    break;
+                case "2":
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(praga2);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/12/21/10/18/orloj-1102368_960_720.jpg").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(praga3);
+                    break;
+                case "3":
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(praga4);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/08/24/20/22/prague-905569_960_720.jpg").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(praga5);
+                    break;
+                case "4":
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(praga6);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/04/29/17/09/prague-1361374_960_720.jpg").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(praga7);
+                    break;
+                case "5":
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(praga8);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/01/29/16/57/prague-1168302_960_720.jpg").into(otra);
 
-            } else {
-                System.out.println("ERROR");
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/02/07/21/29/prague-2047105_960_720.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/10/21/19/03/czech-republic-1758820_960_720.png").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/11/27/16/40/clock-547839_960_720.jpg").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
 
             otra.setOnClickListener(new View.OnClickListener() {
@@ -883,32 +1113,50 @@ public class EuropaPartida extends AppCompatActivity {
                     int number = r.nextInt(max - min + 1) + min;
                     final String result = String.valueOf(number);
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(praga1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(praga2);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/03/25/19/00/czech-republic-1279425_960_720.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(praga3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(praga4);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/12/21/10/18/orloj-1102368_960_720.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(praga5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(praga6);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/08/24/20/22/prague-905569_960_720.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(praga7);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(praga8);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/04/29/17/09/prague-1361374_960_720.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        case "5":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/01/29/16/57/prague-1168302_960_720.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/02/07/21/29/prague-2047105_960_720.jpg").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/10/21/19/03/czech-republic-1758820_960_720.png").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/11/27/16/40/clock-547839_960_720.jpg").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
                 }
             });
@@ -930,41 +1178,50 @@ public class EuropaPartida extends AppCompatActivity {
             });
         } else if (ciudad.equals("Roma")) {
 
-            final Bitmap rome1 = BitmapFactory.decodeResource(getResources(), R.mipmap.rome1);
-            final Bitmap rome2 = BitmapFactory.decodeResource(getResources(), R.mipmap.rome2);
-            final Bitmap rome3 = BitmapFactory.decodeResource(getResources(), R.mipmap.rome3);
-            final Bitmap rome4 = BitmapFactory.decodeResource(getResources(), R.mipmap.rome4);
-            final Bitmap rome5 = BitmapFactory.decodeResource(getResources(), R.mipmap.rome5);
-            final Bitmap rome6 = BitmapFactory.decodeResource(getResources(), R.mipmap.rome6);
-            final Bitmap rome8 = BitmapFactory.decodeResource(getResources(), R.mipmap.rome8);
-            final Bitmap rome9 = BitmapFactory.decodeResource(getResources(), R.mipmap.rome9);
+            switch (result) {
+                case "1":
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(rome1);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/03/26/05/47/vittorio-emanuele-monument-298412_960_720.jpg").into(otra);
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(rome2);
+                    break;
+                case "2":
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(rome3);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/03/23/04/19/pantheon-293074_960_720.jpg").into(otra);
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(rome4);
+                    break;
+                case "3":
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(rome5);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/02/01/16/15/colosseum-2030639_960_720.jpg").into(otra);
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(rome6);
+                    break;
+                case "4":
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(rome8);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/01/17/39/rome-1945033_960_720.jpg").into(otra);
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(rome9);
+                    break;
+                case "5":
 
-            } else {
-                System.out.println("ERROR");
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/08/31/13/41/italy-1633494_960_720.jpg").into(otra);
+
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/03/26/05/46/trevi-fountain-298411_960_720.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/08/31/14/27/italy-1633660_960_720.jpg").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/02/10/51/rome-1791065_960_720.jpg").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
 
             otra.setOnClickListener(new View.OnClickListener() {
@@ -978,32 +1235,50 @@ public class EuropaPartida extends AppCompatActivity {
                     int number = r.nextInt(max - min + 1) + min;
                     final String result = String.valueOf(number);
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(rome1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(rome2);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/03/26/05/47/vittorio-emanuele-monument-298412_960_720.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(rome3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(rome4);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/03/23/04/19/pantheon-293074_960_720.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(rome5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(rome6);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/02/01/16/15/colosseum-2030639_960_720.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(rome8);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(rome9);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/01/17/39/rome-1945033_960_720.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        case "5":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/08/31/13/41/italy-1633494_960_720.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/03/26/05/46/trevi-fountain-298411_960_720.jpg").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/08/31/14/27/italy-1633660_960_720.jpg").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/02/10/51/rome-1791065_960_720.jpg").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
 
                 }
@@ -1026,43 +1301,51 @@ public class EuropaPartida extends AppCompatActivity {
             });
         } else if (ciudad.equals("Valencia")) {
 
-            final Bitmap valencia1 = BitmapFactory.decodeResource(getResources(), R.mipmap.vale1);
-            final Bitmap valencia2 = BitmapFactory.decodeResource(getResources(), R.mipmap.vale2);
-            final Bitmap valencia3 = BitmapFactory.decodeResource(getResources(), R.mipmap.vale3);
-            final Bitmap valencia4 = BitmapFactory.decodeResource(getResources(), R.mipmap.vale4);
-            final Bitmap valencia5 = BitmapFactory.decodeResource(getResources(), R.mipmap.vale5);
-            final Bitmap valencia6 = BitmapFactory.decodeResource(getResources(), R.mipmap.vale6);
-            final Bitmap valencia7 = BitmapFactory.decodeResource(getResources(), R.mipmap.vale7);
-            final Bitmap valencia8 = BitmapFactory.decodeResource(getResources(), R.mipmap.vale8);
+            switch (result) {
+                case "1":
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(valencia1);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/04/18/51/cac-1952795_960_720.jpg").into(otra);
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(valencia2);
+                    break;
+                case "2":
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(valencia3);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/11/11/19/58/city-of-arts-and-science-1039163_960_720.jpg").into(otra);
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(valencia4);
+                    break;
+                case "3":
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(valencia5);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/07/09/22/00/valencia-838631_960_720.jpg").into(otra);
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(valencia6);
+                    break;
+                case "4":
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(valencia7);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/03/14/15/56/building-1255690_960_720.jpg").into(otra);
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(valencia8);
+                    break;
+                case "5":
 
-            } else {
-                System.out.println("ERROR");
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/22/20/51/beach-1850556_960_720.jpg").into(otra);
+
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/01/29/13/45/paella-1167973_960_720.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/01/23/15/23/valencia-1157601_960_720.jpg").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/04/12/14/10/fireworks-102971_960_720.jpg").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
-
             otra.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1074,32 +1357,50 @@ public class EuropaPartida extends AppCompatActivity {
                     int number = r.nextInt(max - min + 1) + min;
                     final String result = String.valueOf(number);
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(valencia1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(valencia2);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/04/18/51/cac-1952795_960_720.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(valencia3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(valencia4);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/11/11/19/58/city-of-arts-and-science-1039163_960_720.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(valencia5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(valencia6);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2015/07/09/22/00/valencia-838631_960_720.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(valencia7);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(valencia8);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/03/14/15/56/building-1255690_960_720.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        case "5":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/22/20/51/beach-1850556_960_720.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/01/29/13/45/paella-1167973_960_720.jpg").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/01/23/15/23/valencia-1157601_960_720.jpg").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/04/12/14/10/fireworks-102971_960_720.jpg").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
 
                 }
@@ -1122,44 +1423,51 @@ public class EuropaPartida extends AppCompatActivity {
             });
         } else if (ciudad.equals("Venecia")) {
 
-            final Bitmap venecia1 = BitmapFactory.decodeResource(getResources(), R.mipmap.venecia1);
-            final Bitmap venecia2 = BitmapFactory.decodeResource(getResources(), R.mipmap.venecia2);
-            final Bitmap venecia3 = BitmapFactory.decodeResource(getResources(), R.mipmap.venecia3);
-            final Bitmap venecia4 = BitmapFactory.decodeResource(getResources(), R.mipmap.venecia4);
-            final Bitmap venecia5 = BitmapFactory.decodeResource(getResources(), R.mipmap.venecia5);
-            final Bitmap venecia6 = BitmapFactory.decodeResource(getResources(), R.mipmap.venecia6);
-            final Bitmap venecia7 = BitmapFactory.decodeResource(getResources(), R.mipmap.venecia7);
-            final Bitmap venecia8 = BitmapFactory.decodeResource(getResources(), R.mipmap.venecia8);
+            switch (result) {
+                case "1":
 
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/10/12/23/59/venice-194835_960_720.jpg").into(otra);
 
-            if (result.equals("1")) {
-                otra.setImageBitmap(venecia1);
+                    break;
+                case "2":
 
-            } else if (result.equals("2")) {
-                otra.setImageBitmap(venecia2);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/28/01/01/mask-2014556_960_720.jpg").into(otra);
 
-            } else if (result.equals("3")) {
-                otra.setImageBitmap(venecia3);
+                    break;
+                case "3":
 
-            } else if (result.equals("4")) {
-                otra.setImageBitmap(venecia4);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/02/11/17/58/travel-2058242_960_720.jpg").into(otra);
 
-            } else if (result.equals("5")) {
-                otra.setImageBitmap(venecia5);
+                    break;
+                case "4":
 
-            } else if (result.equals("6")) {
-                otra.setImageBitmap(venecia6);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/27/09/24/venice-1933559_960_720.jpg").into(otra);
 
-            } else if (result.equals("7")) {
-                otra.setImageBitmap(venecia7);
+                    break;
+                case "5":
 
-            } else if (result.equals("8")) {
-                otra.setImageBitmap(venecia8);
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/21/14/09/venice-1997306_960_720.jpg").into(otra);
 
-            } else {
-                System.out.println("ERROR");
+                    break;
+                case "6":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/05/00/27/venice-1882880_960_720.jpg").into(otra);
+
+                    break;
+                case "7":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/09/22/14/venice-1896208_960_720.jpg").into(otra);
+
+                    break;
+                case "8":
+
+                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/11/21/17/23/piazza-san-marco-540808_960_720.jpg").into(otra);
+
+                    break;
+                default:
+                    System.out.println("ERROR");
+                    break;
             }
-
             otra.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1172,32 +1480,50 @@ public class EuropaPartida extends AppCompatActivity {
                     final String result = String.valueOf(number);
 
 
-                    if (result.equals("1")) {
-                        otra.setImageBitmap(venecia1);
+                    switch (result) {
+                        case "1":
 
-                    } else if (result.equals("2")) {
-                        otra.setImageBitmap(venecia2);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2013/10/12/23/59/venice-194835_960_720.jpg").into(otra);
 
-                    } else if (result.equals("3")) {
-                        otra.setImageBitmap(venecia3);
+                            break;
+                        case "2":
 
-                    } else if (result.equals("4")) {
-                        otra.setImageBitmap(venecia4);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/28/01/01/mask-2014556_960_720.jpg").into(otra);
 
-                    } else if (result.equals("5")) {
-                        otra.setImageBitmap(venecia5);
+                            break;
+                        case "3":
 
-                    } else if (result.equals("6")) {
-                        otra.setImageBitmap(venecia6);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/02/11/17/58/travel-2058242_960_720.jpg").into(otra);
 
-                    } else if (result.equals("7")) {
-                        otra.setImageBitmap(venecia7);
+                            break;
+                        case "4":
 
-                    } else if (result.equals("8")) {
-                        otra.setImageBitmap(venecia8);
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/27/09/24/venice-1933559_960_720.jpg").into(otra);
 
-                    } else {
-                        System.out.println("ERROR");
+                            break;
+                        case "5":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2017/01/21/14/09/venice-1997306_960_720.jpg").into(otra);
+
+                            break;
+                        case "6":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/05/00/27/venice-1882880_960_720.jpg").into(otra);
+
+                            break;
+                        case "7":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/12/09/22/14/venice-1896208_960_720.jpg").into(otra);
+
+                            break;
+                        case "8":
+
+                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2014/11/21/17/23/piazza-san-marco-540808_960_720.jpg").into(otra);
+
+                            break;
+                        default:
+                            System.out.println("ERROR");
+                            break;
                     }
 
 

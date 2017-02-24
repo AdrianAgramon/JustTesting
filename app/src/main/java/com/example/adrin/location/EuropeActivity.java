@@ -31,6 +31,8 @@ public class EuropeActivity extends AppCompatActivity {
             bestResult=lastResult;
         }
 
+        
+
 
 
 
@@ -52,88 +54,115 @@ public class EuropeActivity extends AppCompatActivity {
                 int number = r.nextInt(max - min + 1) + min;
                 final String result = String.valueOf(number);
 
-                if (result.equals("1")) {
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Madrid");
-                    // reg.putExtra("Score", score);
-                    startActivity(reg);
-                } else if (result.equals("2")) {
+                switch (result) {
+                    case "1": {
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Paris");
-                    //  reg.putExtra("Score", score);
-                    startActivity(reg);
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Madrid");
+                        // reg.putExtra("Score", score);
+                        startActivity(reg);
+                        break;
+                    }
+                    case "2": {
 
-                } else if (result.equals("3")) {
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Paris");
+                        //  reg.putExtra("Score", score);
+                        startActivity(reg);
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Basilea");
-                    //  reg.putExtra("Score", score);
-                    startActivity(reg);
+                        break;
+                    }
+                    case "3": {
 
-                } else if (result.equals("4")) {
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Basilea");
+                        //  reg.putExtra("Score", score);
+                        startActivity(reg);
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Barcelona");
-                    //  reg.putExtra("Score", score);
-                    startActivity(reg);
+                        break;
+                    }
+                    case "4": {
 
-                } else if (result.equals("5")) {
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Barcelona");
+                        //  reg.putExtra("Score", score);
+                        startActivity(reg);
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Berlin");
-                    // reg.putExtra("Score", score);
-                    startActivity(reg);
+                        break;
+                    }
+                    case "5": {
 
-                } else if (result.equals("6")) {
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Berlin");
+                        // reg.putExtra("Score", score);
+                        startActivity(reg);
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Dublin");
-                    //   reg.putExtra("Score", score);
-                    startActivity(reg);
+                        break;
+                    }
+                    case "6": {
+
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Dublin");
+                        //   reg.putExtra("Score", score);
+                        startActivity(reg);
 
 
-                } else if (result.equals("7")) {
+                        break;
+                    }
+                    case "7": {
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Roma");
-                    //  reg.putExtra("Score", score);
-                    startActivity(reg);
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Roma");
+                        //  reg.putExtra("Score", score);
+                        startActivity(reg);
 
-                } else if (result.equals("8")) {
+                        break;
+                    }
+                    case "8": {
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Pompeya");
-                    // reg.putExtra("Score", score);
-                    startActivity(reg);
-                } else if (result.equals("9")) {
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Pompeya");
+                        // reg.putExtra("Score", score);
+                        startActivity(reg);
+                        break;
+                    }
+                    case "9": {
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Praga");
-                    //  reg.putExtra("Score", score);
-                    startActivity(reg);
-                } else if (result.equals("10")) {
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Praga");
+                        //  reg.putExtra("Score", score);
+                        startActivity(reg);
+                        break;
+                    }
+                    case "10": {
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Cuidad", "Valencia");
-                    ///  reg.putExtra("Score", score);
-                    startActivity(reg);
-                } else if (result.equals("11")) {
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Cuidad", "Valencia");
+                        ///  reg.putExtra("Score", score);
+                        startActivity(reg);
+                        break;
+                    }
+                    case "11": {
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Venecia");
-                    // reg.putExtra("Score", score);
-                    startActivity(reg);
-                } else if (result.equals("12")) {
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Venecia");
+                        // reg.putExtra("Score", score);
+                        startActivity(reg);
+                        break;
+                    }
+                    case "12": {
 
-                    Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Londres");
-                    //  reg.putExtra("Score", score);
-                    startActivity(reg);
+                        Intent reg = new Intent(EuropeActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Londres");
+                        //  reg.putExtra("Score", score);
+                        startActivity(reg);
 
-                } else {
-                    System.out.println("ERROR");
+                        break;
+                    }
+                    default:
+                        System.out.println("ERROR");
+                        break;
                 }
             }
         });

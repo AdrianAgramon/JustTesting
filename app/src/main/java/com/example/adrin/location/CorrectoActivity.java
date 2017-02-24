@@ -38,79 +38,103 @@ public class CorrectoActivity extends AppCompatActivity {
                 final String result = String.valueOf(number);
 
 
+                switch (result) {
+                    case "1": {
+
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Madrid");
+                        startActivity(reg);
+
+                        break;
+                    }
+                    case "2": {
+
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Berlin");
+                        startActivity(reg);
+
+                        break;
+                    }
+                    case "3": {
+
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Roma");
+                        startActivity(reg);
+
+                        break;
+                    }
+                    case "4": {
+
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Paris");
+                        startActivity(reg);
+
+                        break;
+                    }
+                    case "5": {
+
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Pompeya");
+                        startActivity(reg);
+
+                        break;
+                    }
+                    case "6": {
+
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Valencia");
+                        startActivity(reg);
 
 
-                if (result.equals("1")) {
+                        break;
+                    }
+                    case "7": {
 
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Madrid");
-                    startActivity(reg);
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Venecia");
+                        startActivity(reg);
 
-                } else if (result.equals("2")) {
+                        break;
+                    }
+                    case "8": {
 
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Berlin");
-                    startActivity(reg);
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Dublin");
+                        startActivity(reg);
+                        break;
+                    }
+                    case "9": {
 
-                } else if (result.equals("3")) {
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Praga");
+                        startActivity(reg);
+                        break;
+                    }
+                    case "10": {
 
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Roma");
-                    startActivity(reg);
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Barcelona");
+                        startActivity(reg);
+                        break;
+                    }
+                    case "11": {
 
-                } else if (result.equals("4")) {
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Londres");
+                        startActivity(reg);
+                        break;
+                    }
+                    case "12": {
 
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Paris");
-                    startActivity(reg);
+                        Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
+                        reg.putExtra("Ciudad", "Basilea");
+                        startActivity(reg);
 
-                } else if (result.equals("5")) {
-
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Pompeya");
-                    startActivity(reg);
-
-                } else if (result.equals("6")) {
-
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Valencia");
-                    startActivity(reg);
-
-
-                } else if (result.equals("7")) {
-
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Venecia");
-                    startActivity(reg);
-
-                } else if (result.equals("8")) {
-
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Dublin");
-                    startActivity(reg);
-                } else if (result.equals("9")) {
-
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Praga");
-                    startActivity(reg);
-                } else if (result.equals("10")) {
-
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Barcelona");
-                    startActivity(reg);
-                } else if (result.equals("11")) {
-
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Londres");
-                    startActivity(reg);
-                } else if (result.equals("12")) {
-
-                    Intent reg = new Intent(CorrectoActivity.this, EuropaPartida.class);
-                    reg.putExtra("Ciudad", "Basilea");
-                    startActivity(reg);
-
-                } else {
-                    System.out.println("ERROR");
+                        break;
+                    }
+                    default:
+                        System.out.println("ERROR");
+                        break;
                 }
 
             }

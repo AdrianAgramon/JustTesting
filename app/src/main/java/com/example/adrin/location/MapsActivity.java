@@ -28,7 +28,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MapsActivity extends FragmentActivity implements
         OnMapReadyCallback, GoogleMap.OnMapClickListener {
-    private static int TIME_OUT = 400;
+
     final LatLng start = new LatLng(45.7484600, 4.8467100);
     LatLng objetivo = new LatLng(0, 0);
     LatLng Marker2 = new LatLng(0, 0);
@@ -58,6 +58,8 @@ public class MapsActivity extends FragmentActivity implements
             @Override
             public void onClick(View view) {
 
+                int  distancia = (int) CalculationByDistance(objetivo, Marker2);
+
                 PolylineOptions line = new PolylineOptions().add(objetivo, Marker2)
 
                         .width(5).color(Color.YELLOW);
@@ -69,10 +71,10 @@ public class MapsActivity extends FragmentActivity implements
                         .icon(BitmapDescriptorFactory
                                 .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
-                dist.setText(" "+(int) CalculationByDistance(objetivo,Marker2));
-                score[0] = (int) CalculationByDistance(objetivo, Marker2);
+                dist.setText(" "+distancia);
+                score[0] = distancia;
 
-                new CountDownTimer(2500, 1000) {
+                new CountDownTimer(1500, 1000) {
                     public void onTick(long millisUntilFinished) {
                     }
 
