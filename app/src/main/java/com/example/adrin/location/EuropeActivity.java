@@ -65,7 +65,7 @@ public class EuropeActivity extends AppCompatActivity {
                 int number = r.nextInt(max - min + 1) + min;
                 final String result = String.valueOf(number);
 
-                final int partidas =2;
+                final int partidas =5;
 
                 switch (result) {
                     case "1": {

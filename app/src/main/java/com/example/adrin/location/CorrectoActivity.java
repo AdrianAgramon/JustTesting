@@ -1,5 +1,7 @@
 package com.example.adrin.location;
 
+import android.animation.TypeEvaluator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,14 +22,28 @@ public class CorrectoActivity extends AppCompatActivity {
 
         final int partidas = getIntent().getExtras().getInt("Partidas")-1;
 
-        TextView puntuacion = (TextView) findViewById(R.id.puntuacionText) ;
+        final TextView puntuacion = (TextView) findViewById(R.id.puntuacionText) ;
         TextView partRest = (TextView) findViewById(R.id.TextPartidas);
 
        resultado+=getIntent().getExtras().getInt("score");
 
-        puntuacion.setText(" "+resultado+" ");
+       // puntuacion.setText(" "+resultado+" ");
 
         partRest.setText(""+partidas+"");
+        ValueAnimator animator = new ValueAnimator();
+        animator.setObjectValues(0, resultado);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            public void onAnimationUpdate(ValueAnimator animation) {
+                puntuacion.setText(String.valueOf(animation.getAnimatedValue()));
+            }
+        });
+        animator.setEvaluator(new TypeEvaluator<Integer>() {
+            public Integer evaluate(float fraction, Integer startValue, Integer endValue) {
+                return Math.round(startValue + (endValue - startValue) * fraction);
+            }
+        });
+        animator.setDuration(1000);
+        animator.start();
 
         Button otra = (Button) findViewById(R.id.restartbutton);
 

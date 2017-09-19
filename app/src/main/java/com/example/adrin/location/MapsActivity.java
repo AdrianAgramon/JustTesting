@@ -1,5 +1,7 @@
 package com.example.adrin.location;
 
+import android.animation.TypeEvaluator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -77,7 +79,23 @@ public class MapsActivity extends FragmentActivity implements
                         .icon(BitmapDescriptorFactory
                                 .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
-                dist.setText(" "+distancia);
+               // dist.setText(" "+distancia);
+
+                ValueAnimator animator = new ValueAnimator();
+                animator.setObjectValues(0, distancia);
+                animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        dist.setText(String.valueOf(animation.getAnimatedValue()));
+                    }
+                });
+                animator.setEvaluator(new TypeEvaluator<Integer>() {
+                    public Integer evaluate(float fraction, Integer startValue, Integer endValue) {
+                        return Math.round(startValue + (endValue - startValue) * fraction);
+                    }
+                });
+                animator.setDuration(1000);
+                animator.start();
+
                 score[0] = distancia;
 
                 new CountDownTimer(1500, 1000) {
@@ -117,21 +135,21 @@ public class MapsActivity extends FragmentActivity implements
 
     }
 
-    public void moveCamera(View view) {
-        mapa.moveCamera(CameraUpdateFactory.newLatLng(objetivo));
-    }
-
-    public void animateCamera(View view) {
-        if (mapa.getMyLocation() != null)
-            mapa.animateCamera(CameraUpdateFactory.newLatLngZoom(
-                    new LatLng(mapa.getMyLocation().getLatitude(),
-                            mapa.getMyLocation().getLongitude()), 15));
-    }
-
-    public void addMarker(View view) {
-        mapa.addMarker(new MarkerOptions().position(
-                mapa.getCameraPosition().target));
-    }
+//    public void moveCamera(View view) {
+//        mapa.moveCamera(CameraUpdateFactory.newLatLng(objetivo));
+//    }
+//
+//    public void animateCamera(View view) {
+//        if (mapa.getMyLocation() != null)
+//            mapa.animateCamera(CameraUpdateFactory.newLatLngZoom(
+//                    new LatLng(mapa.getMyLocation().getLatitude(),
+//                            mapa.getMyLocation().getLongitude()), 15));
+//    }
+//
+//    public void addMarker(View view) {
+//        mapa.addMarker(new MarkerOptions().position(
+//                mapa.getCameraPosition().target));
+//    }
 
     @Override public void onMapClick(LatLng puntoPulsado) {
 
