@@ -88,6 +88,16 @@ public class FinalPartida extends AppCompatActivity {
         envioPuntuacion.enqueue(new Callback<Integer>() {
             @Override
             public void onResponse(Call<Integer> call, Response<Integer> response) {
+
+                if(response.code()== 200) {
+
+                    Toast.makeText(FinalPartida.this, "Puntuación enviada correctamente! :D", Toast.LENGTH_SHORT).show();
+                    Intent reg = new Intent(FinalPartida.this, selectWhere.class);
+                    startActivity(reg);
+                    finish();
+                }else if (response.code()==400){
+                    Toast.makeText(FinalPartida.this, "No se envió la puntuación....", Toast.LENGTH_LONG).show();
+                }
                 Toast.makeText(FinalPartida.this, "Puntuación enviada correctamente! :D", Toast.LENGTH_SHORT).show();
 
             }

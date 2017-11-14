@@ -293,29 +293,35 @@ public class welcomeActivity extends AppCompatActivity {
         call.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                Toast.makeText(welcomeActivity.this, "Usuario Creado correctamente! :D", Toast.LENGTH_SHORT).show();
 
-                txt1.setVisibility(View.INVISIBLE);
-                txt1.startAnimation(animation);
-                txt2.setVisibility(View.INVISIBLE);
-                txt2.startAnimation(animation);
-                txt5.setVisibility(View.INVISIBLE);
-                txt5.startAnimation(animation);
-                txt6.setVisibility(View.INVISIBLE);
-                txt6.startAnimation(animation);
-                txt7.setVisibility(View.INVISIBLE);
-                txt7.startAnimation(animation);
-                btnCrear2.setVisibility(View.INVISIBLE);
-                btnCrear2.setClickable(false);
-                btnCrear2.startAnimation(animation);
+                if(response.code()== 200) {
+                    txt1.setVisibility(View.INVISIBLE);
+                    txt1.startAnimation(animation);
+                    txt2.setVisibility(View.INVISIBLE);
+                    txt2.startAnimation(animation);
+                    txt5.setVisibility(View.INVISIBLE);
+                    txt5.startAnimation(animation);
+                    txt6.setVisibility(View.INVISIBLE);
+                    txt6.startAnimation(animation);
+                    txt7.setVisibility(View.INVISIBLE);
+                    txt7.startAnimation(animation);
+                    btnCrear2.setVisibility(View.INVISIBLE);
+                    btnCrear2.setClickable(false);
+                    btnCrear2.startAnimation(animation);
 
-                btnLogIn2.setClickable(true);
-                btnLogIn2.setVisibility(View.VISIBLE);
-                btnLogIn2.startAnimation(animation2);
-                txt3.setVisibility(View.VISIBLE);
-                txt3.startAnimation(animation2);
-                txt4.setVisibility(View.VISIBLE);
-                txt4.startAnimation(animation2);
+                    btnLogIn2.setClickable(true);
+                    btnLogIn2.setVisibility(View.VISIBLE);
+                    btnLogIn2.startAnimation(animation2);
+                    txt3.setVisibility(View.VISIBLE);
+                    txt3.startAnimation(animation2);
+                    txt4.setVisibility(View.VISIBLE);
+                    txt4.startAnimation(animation2);
+
+                    Toast.makeText(welcomeActivity.this, "Usuario Creado correctamente! :D", Toast.LENGTH_SHORT).show();
+
+                }else if (response.code()==400){
+                    Toast.makeText(welcomeActivity.this, "Hubo algún fallo....", Toast.LENGTH_LONG).show();
+                }
 
 
             }
