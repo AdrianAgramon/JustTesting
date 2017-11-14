@@ -2,6 +2,7 @@ package com.example.adrin.location;
 
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.icu.text.DecimalFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Vibrator;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
@@ -56,6 +58,63 @@ public class MapsActivity extends FragmentActivity implements
         final Button botonDist = (Button) findViewById(R.id.resolver);
         final TextView dist= (TextView) findViewById(R.id.distanciaText);
 
+        final TextView timerView = (TextView) findViewById(R.id.textTimeView);
+
+
+        final CountDownTimer timer = new CountDownTimer(30000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timerView.setText("Tiempo restante: "+ (millisUntilFinished/1000));
+
+                if (millisUntilFinished < 10000 && millisUntilFinished > 8000  ){
+                    Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    v.vibrate(1000);
+                }
+
+                if (millisUntilFinished < 6000 && millisUntilFinished > 4000  ){
+                    Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    v.vibrate(1000);
+                }
+
+                if (millisUntilFinished < 2000 && millisUntilFinished > 1000  ){
+                    Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    v.vibrate(1000);
+                }
+
+
+            }
+
+            @Override
+            public void onFinish() {
+                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(1000);
+                timerView.setText("Fin del Tiempo");
+
+                new CountDownTimer(2000, 1000) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+                      //DO NOTHING
+                    }
+                    @Override
+                    public void onFinish() {
+
+                        Intent reg = new Intent(MapsActivity.this, CorrectoActivity.class);
+                        reg.putExtra("score", 9999);
+                        reg.putExtra("Partidas", partidas);
+
+                        startActivity(reg);
+                    }
+                }.start();
+
+            }
+        }.start();
+
+
+
+
+
+
+        //Si el usuario está dentro
         botonDist.setOnClickListener(new View.OnClickListener() {
 
 
@@ -66,6 +125,7 @@ public class MapsActivity extends FragmentActivity implements
 
 
 
+                timer.cancel();
                 int  distancia = (int) CalculationByDistance(objetivo, Marker2);
 
                 PolylineOptions line = new PolylineOptions().add(objetivo, Marker2)
@@ -110,6 +170,7 @@ public class MapsActivity extends FragmentActivity implements
                         reg.putExtra("Partidas", partidas);
 
                         startActivity(reg);
+                        finish();
 
                     }
 
@@ -117,6 +178,10 @@ public class MapsActivity extends FragmentActivity implements
             }
         });
     }
+
+
+
+
 
     @Override public void onMapReady(GoogleMap googleMap) {
         mapa = googleMap;

@@ -1584,6 +1584,7 @@ public class EuropaPartida extends AppCompatActivity {
             Intent reg = new Intent(EuropaPartida.this, FinalPartida.class);
             reg.putExtra("Score", score);
             startActivity(reg);
+            finish();
 
 
         }

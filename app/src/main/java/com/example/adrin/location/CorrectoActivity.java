@@ -66,6 +66,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Madrid");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
+                        finish();
 
                         break;
                     }
@@ -75,6 +76,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Berlin");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
+                        finish();
 
                         break;
                     }
@@ -84,6 +86,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Roma");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
+                        finish();
 
                         break;
                     }
@@ -93,6 +96,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Paris");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
+                        finish();
 
                         break;
                     }
@@ -102,7 +106,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Pompeya");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
-
+                        finish();
                         break;
                     }
                     case "6": {
@@ -111,7 +115,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Valencia");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
-
+                        finish();
 
                         break;
                     }
@@ -121,7 +125,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Venecia");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
-
+                        finish();
                         break;
                     }
                     case "8": {
@@ -130,6 +134,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Dublin");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
+                        finish();
                         break;
                     }
                     case "9": {
@@ -138,6 +143,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Praga");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
+                        finish();
                         break;
                     }
                     case "10": {
@@ -146,6 +152,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Barcelona");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
+                        finish();
                         break;
                     }
                     case "11": {
@@ -162,7 +169,7 @@ public class CorrectoActivity extends AppCompatActivity {
                         reg.putExtra("Ciudad", "Basilea");
                         reg.putExtra("Partidas", partidas);
                         startActivity(reg);
-
+                        finish();
                         break;
                     }
                     default:

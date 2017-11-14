@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -43,13 +44,15 @@ public class welcomeActivity extends AppCompatActivity {
     Animation animation, animation2, animation3;
     BlurImageView myBlurImage;
     ImageView background;
-    EditText username, password, email, nombre, username2, password2;
+    EditText username1, password, email, nombre, username2, password2;
     Button botonLonIn,botonCrear,btnLogIn2, btnCrear2;
     AutoCompleteTextView pais;
     boolean isLogin, isCreate;
     TextInputLayout txt1, txt2, txt3, txt4, txt5, txt6, txt7;
-    String baseUrl = "http://10.10.2.197:8888/location/api/GestionDeUsuarios/";
+    String baseUrl = " https://lit-ravine-97705.herokuapp.com/location/api/GestionDeUsuarios/";
 
+
+    public static String usernameFinal;
 
     private static final String[] COUNTRIES = new String[] {
             "India","España", "Francia", "Italia", "Alemania", "Suiza","Estados Unidos","China"
@@ -60,12 +63,13 @@ public class welcomeActivity extends AppCompatActivity {
         //Remove title bar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-//Remove notification bar
+        //Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-//set content view AFTER ABOVE sequence (to avoid crash)
-     //   this.setContentView(R.layout.activity_welcome);
+        //set content view AFTER ABOVE sequence (to avoid crash)
+        //   this.setContentView(R.layout.activity_welcome);
         this.setContentView(R.layout.activity_welcome_final);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
 
 
@@ -83,7 +87,7 @@ public class welcomeActivity extends AppCompatActivity {
         btnCrear2 = (Button)findViewById(R.id.buttonCrear2);
 
         final TextView title = (TextView) findViewById((R.id.title));
-        username = (EditText) findViewById(R.id.username);
+        username1 = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         pais = (AutoCompleteTextView)findViewById(R.id.editPais);
         email = (EditText)findViewById(R.id.editMail);
@@ -108,14 +112,25 @@ public class welcomeActivity extends AppCompatActivity {
 
         pais.setAdapter(adapter);
 
+        final Button pass = (Button) findViewById(R.id.passButton);
+
+        pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent reg = new Intent(welcomeActivity.this, selectWhere.class);
+                startActivity(reg);
+
+            }
+        });
+
 
 
 
         botonLonIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Intent reg = new Intent(welcomeActivity.this, selectWhere.class);
-              //  startActivity(reg);
+
                 myBlurImage.setVisibility(View.VISIBLE);
                 myBlurImage.startAnimation(animation2);
                 background.startAnimation(animation);
@@ -123,6 +138,7 @@ public class welcomeActivity extends AppCompatActivity {
                 txt3.startAnimation(animation2);
                 txt4.setVisibility(View.VISIBLE);
                 txt4.startAnimation(animation2);
+
                 botonCrear.startAnimation(animation);
                 botonLonIn.startAnimation(animation);
                 botonLonIn.setClickable(false);
@@ -135,13 +151,23 @@ public class welcomeActivity extends AppCompatActivity {
             }
         });
 
-        btnLogIn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = username2.getText().toString();
-                String contrasenna =  password2.getText().toString();
+                btnLogIn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                sendNetworkRequestLogin(username,contrasenna);
+                        if(TextUtils.isEmpty(username1.getText().toString())){
+                            username1.setError("Este campo no puede estar vacío");
+                            return;
+                        }else if (TextUtils.isEmpty(password.getText().toString())){
+                            password.setError("Este campo no puede estar vacío");
+                            return;
+                        }else {
+                            String username = username1.getText().toString();
+                            usernameFinal = username;
+                            String contrasenna = password.getText().toString();
+
+                            sendNetworkRequestLogin(username, contrasenna);
+                        }
 
             }
         });
@@ -154,10 +180,11 @@ public class welcomeActivity extends AppCompatActivity {
                 myBlurImage.setVisibility(View.VISIBLE);
                 myBlurImage.startAnimation(animation2);
                 background.startAnimation(animation);
-                txt1.setVisibility(View.VISIBLE);
-                txt1.startAnimation(animation2);
+
                 txt2.setVisibility(View.VISIBLE);
                 txt2.startAnimation(animation2);
+                txt1.setVisibility(View.VISIBLE);
+                txt1.startAnimation(animation2);
                 txt5.setVisibility(View.VISIBLE);
                 txt5.startAnimation(animation2);
                 txt6.setVisibility(View.VISIBLE);
@@ -183,23 +210,34 @@ public class welcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Usuario user = new Usuario(
-                        username2.getText().toString(),
-                        password2.getText().toString(),
-                        pais.getText().toString(),
-                        email.getText().toString(),
-                        nombre.getText().toString()
-               );
+                if(TextUtils.isEmpty(username2.getText().toString())){
+                    username2.setError("Este campo no puede estar vacío");
+                    return;
+                }else if(TextUtils.isEmpty(password2.getText().toString())){
+                    password2.setError("Este campo no puede estar vacío");
+                    return;
+                }else if(TextUtils.isEmpty(email.getText().toString())){
+                    email.setError("Este campo no puede estar vacío");
+                    return;
+                }else if(TextUtils.isEmpty(nombre.getText().toString())){
+                    nombre.setError("Este campo no puede estar vacío");
+                    return;
+                }else {
 
-                sendNetworkRequestAlta(user);
+                    Usuario user = new Usuario(
 
-                Intent reg = new Intent(welcomeActivity.this, welcomeActivity.class);
-                startActivity(reg);
+                            username2.getText().toString(),
+                            password2.getText().toString(),
+                            pais.getText().toString(),
+                            email.getText().toString(),
+                            nombre.getText().toString()
+
+                    );
+
+                    sendNetworkRequestAlta(user);
+                }
             }
         });
-
-
-
     }
 
     private  void sendNetworkRequestLogin (String username, String contrasenna){
@@ -219,7 +257,16 @@ public class welcomeActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
 
-                Toast.makeText(welcomeActivity.this, "Usuario Creado correctamente! :D", Toast.LENGTH_SHORT).show();
+                if(response.code()== 200) {
+
+                    Toast.makeText(welcomeActivity.this, "Usuario logeado correctamente! :D", Toast.LENGTH_SHORT).show();
+                    Intent reg = new Intent(welcomeActivity.this, selectWhere.class);
+                    startActivity(reg);
+                    finish();
+                }else if (response.code()==400){
+                    Toast.makeText(welcomeActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_LONG).show();
+                }
+
             }
 
             @Override
@@ -247,6 +294,30 @@ public class welcomeActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 Toast.makeText(welcomeActivity.this, "Usuario Creado correctamente! :D", Toast.LENGTH_SHORT).show();
+
+                txt1.setVisibility(View.INVISIBLE);
+                txt1.startAnimation(animation);
+                txt2.setVisibility(View.INVISIBLE);
+                txt2.startAnimation(animation);
+                txt5.setVisibility(View.INVISIBLE);
+                txt5.startAnimation(animation);
+                txt6.setVisibility(View.INVISIBLE);
+                txt6.startAnimation(animation);
+                txt7.setVisibility(View.INVISIBLE);
+                txt7.startAnimation(animation);
+                btnCrear2.setVisibility(View.INVISIBLE);
+                btnCrear2.setClickable(false);
+                btnCrear2.startAnimation(animation);
+
+                btnLogIn2.setClickable(true);
+                btnLogIn2.setVisibility(View.VISIBLE);
+                btnLogIn2.startAnimation(animation2);
+                txt3.setVisibility(View.VISIBLE);
+                txt3.startAnimation(animation2);
+                txt4.setVisibility(View.VISIBLE);
+                txt4.startAnimation(animation2);
+
+
             }
 
             @Override
@@ -258,5 +329,7 @@ public class welcomeActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 }

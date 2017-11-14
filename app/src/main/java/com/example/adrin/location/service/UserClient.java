@@ -10,6 +10,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 
@@ -24,6 +25,10 @@ public interface UserClient {
 
     @GET("login")
     Call <Boolean> logIn (@QueryMap()Map<String, String> options);
+
+    @POST("guardarPuntuacion/{username}")
+    Call<Integer> envioPuntuacion(@Path("username") String username, @QueryMap() Map<String, Integer> options);
+
 
 
 }
