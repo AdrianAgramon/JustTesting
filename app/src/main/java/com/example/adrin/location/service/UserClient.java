@@ -21,13 +21,13 @@ import retrofit2.http.QueryMap;
 public interface UserClient {
 
     @POST("alta")
-    Call<Usuario>createAccount(@Body  Usuario usuario);
+    Call<Boolean>createAccount(@Body  Usuario usuario);
 
     @GET("login")
     Call <Boolean> logIn (@QueryMap()Map<String, String> options);
 
     @POST("guardarPuntuacion/{username}")
-    Call<Integer> envioPuntuacion(@Path("username") String username, @QueryMap() Map<String, Integer> options);
+    Call<Boolean> envioPuntuacion(@Path("username") String username, @QueryMap() Map<String, Integer> options);
 
 
 

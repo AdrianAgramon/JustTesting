@@ -57,9 +57,9 @@ public class FinalPartida extends AppCompatActivity {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent reg = new Intent(FinalPartida.this, selectWhere.class);
-             //   reg.putExtra("Score", scoreFinal);
-                startActivity(reg);
+//                Intent reg = new Intent(FinalPartida.this, selectWhere.class);
+//             //   reg.putExtra("Score", scoreFinal);
+//                startActivity(reg);
 
                 //Envío de puntuación al servidor.
                sendNetworkPuntuacion( scoreFinal);
@@ -76,18 +76,18 @@ public class FinalPartida extends AppCompatActivity {
 
         Retrofit retrofit = builder.build();
 
-        String usernameFinal = welcomeActivity.usernameFinal;
+        String usernameFinal = LoginActivity.usernameFinal;
         Log.d("Usuario: " , usernameFinal);
 
         //Obtenemos el cliente y llamamos un request al objeto
         UserClient client = retrofit.create(UserClient.class);
         Map<String, Integer> puntuacion = new HashMap<>();
         puntuacion.put("puntuacion", scoreFinal);
-        Call<Integer> envioPuntuacion= client.envioPuntuacion(usernameFinal,puntuacion);
+        Call<Boolean> envioPuntuacion= client.envioPuntuacion(usernameFinal,puntuacion);
 
-        envioPuntuacion.enqueue(new Callback<Integer>() {
+        envioPuntuacion.enqueue(new Callback<Boolean>() {
             @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
+            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
 
                 if(response.code()== 200) {
 
@@ -103,7 +103,7 @@ public class FinalPartida extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
+            public void onFailure(Call<Boolean> call, Throwable t) {
 
                 Toast.makeText(FinalPartida.this, "Algo salió mal...  :( ", Toast.LENGTH_LONG).show();
 

@@ -51,17 +51,17 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Partidas Restantes"
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/puntuacionText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
-        android:id="@+id/textView7"
-        android:textStyle="normal|bold"
-        android:textAllCaps="true"
+        android:text="Turnos Restantes"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
 
     <TextView
         android:layout_width="wrap_content"
