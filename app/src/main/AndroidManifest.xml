@@ -21,7 +21,7 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/map"
+        android:icon="@drawable/iconapp"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
