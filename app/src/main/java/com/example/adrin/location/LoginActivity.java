@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.adrin.location.ResideMenu.MainActivity;
 import com.example.adrin.location.service.UserClient;
 
 import java.util.HashMap;
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username1, password;
     Button btnLogIn2;
     TextInputLayout txt3, txt4;
-    String baseUrl = " https://lit-ravine-97705.herokuapp.com/location/api/GestionDeUsuarios/";
+    String baseUrl = " https://dry-sierra-56010.herokuapp.com/location/api/GestionDeUsuarios/";
 
     public static String usernameFinal;
 
@@ -91,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(response.code()== 200) {
 
                     Toast.makeText(LoginActivity.this, "Usuario logeado correctamente! :D", Toast.LENGTH_SHORT).show();
-                    Intent reg = new Intent(LoginActivity.this, selectWhere.class);
+                    Intent reg = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(reg);
                     finish();
                 }else if (response.code()==400){

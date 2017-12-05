@@ -2,6 +2,10 @@ package com.example.adrin.location;
 
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.adrin.location.ResideMenu.MainActivity;
 import com.example.adrin.location.welcomeActivity;
 import com.example.adrin.location.model.Usuario;
 import com.example.adrin.location.service.UserClient;
@@ -26,7 +32,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class FinalPartida extends AppCompatActivity {
 
-    String baseUrl = "https://lit-ravine-97705.herokuapp.com/location/api/GestionDeJuego/";
+    String baseUrl = "https://dry-sierra-56010.herokuapp.com/location/api/GestionDeJuego/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,14 +92,16 @@ public class FinalPartida extends AppCompatActivity {
         Call<Boolean> envioPuntuacion= client.envioPuntuacion(usernameFinal,puntuacion);
 
         envioPuntuacion.enqueue(new Callback<Boolean>() {
+            @SuppressLint("ResourceType")
             @Override
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
 
                 if(response.code()== 200) {
 
                     Toast.makeText(FinalPartida.this, "Puntuación enviada correctamente! :D", Toast.LENGTH_SHORT).show();
-                    Intent reg = new Intent(FinalPartida.this, selectWhere.class);
-                    startActivity(reg);
+
+                   Intent reg = new Intent(FinalPartida.this, MainActivity.class);
+                   startActivity(reg);
                     finish();
                 }else if (response.code()==400){
                     Toast.makeText(FinalPartida.this, "No se envió la puntuación....", Toast.LENGTH_LONG).show();

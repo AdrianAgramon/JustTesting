@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     AutoCompleteTextView pais;
 
     TextInputLayout txt1, txt2, txt5, txt6, txt7;
-    String baseUrl = " https://lit-ravine-97705.herokuapp.com/location/api/GestionDeUsuarios/";
+    String baseUrl = " https://dry-sierra-56010.herokuapp.com/location/api/GestionDeUsuarios/";
 
     private static final String[] COUNTRIES = new String[] {
             "India","España", "Francia", "Italia", "Alemania", "Suiza","Estados Unidos","China"
