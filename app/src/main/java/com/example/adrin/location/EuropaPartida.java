@@ -318,7 +318,7 @@ public class EuropaPartida extends AppCompatActivity {
                             break;
                         case "3":
                             // otra.setImageBitmap(madrid3);
-                            Picasso.with(getApplicationContext()).load("http://files.newsnetz.ch/story/1/6/1/16107042/4/topelement.jpg").into(otra);
+                            Picasso.with(getApplicationContext()).load("https://unsplash.com/photos/nzyBPhGJEcg").into(otra);
 
                             break;
                         case "4":
@@ -338,12 +338,12 @@ public class EuropaPartida extends AppCompatActivity {
                             break;
                         case "7":
                             //otra.setImageBitmap(madrid7);
-                            Picasso.with(getApplicationContext()).load("http://fminside.net/uploads/monthly_2016_04/basel-logo.png.0c977527e0a0097778e2ab9893b10fc3.png").into(otra);
+                            Picasso.with(getApplicationContext()).load("https://unsplash.com/photos/g-ofB0rb1Uw").into(otra);
 
                             break;
                         case "8":
                             //otra.setImageBitmap(madrid8);
-                            Picasso.with(getApplicationContext()).load("http://www.roche.com/dam/jcr:7e8de406-d8fc-492c-a005-ddde60d64048/en/bau1_aussen_370px.jpg").into(otra);
+                            Picasso.with(getApplicationContext()).load("https://es.wikipedia.org/wiki/Basilea#/media/File:Basel_rathaus.jpg").into(otra);
 
                             break;
                         default:
@@ -365,43 +365,43 @@ public class EuropaPartida extends AppCompatActivity {
 
                             switch (result) {
                                 case "1":
-
+                                    //  otra.setImageBitmap(madrid1);
                                     Picasso.with(getApplicationContext()).load("https://s-media-cache-ak0.pinimg.com/736x/a0/98/be/a098beba1d6ec003a86e7de7ea78e023.jpg").into(otra);
 
                                     break;
                                 case "2":
-
+                                    // otra.setImageBitmap(madrid2);
                                     Picasso.with(getApplicationContext()).load("http://img.myswitzerland.com/mys/n49450/images/buehne/basel_winter_650x365_2.jpg").into(otra);
 
                                     break;
                                 case "3":
-
-                                    Picasso.with(getApplicationContext()).load("http://files.newsnetz.ch/story/1/6/1/16107042/4/topelement.jpg").into(otra);
+                                    // otra.setImageBitmap(madrid3);
+                                    Picasso.with(getApplicationContext()).load("https://unsplash.com/photos/nzyBPhGJEcg").into(otra);
 
                                     break;
                                 case "4":
-
+                                    // otra.setImageBitmap(madrid4);
                                     Picasso.with(getApplicationContext()).load("https://upload.wikimedia.org/wikipedia/commons/6/6d/Basel_SBB,_Bahnhof.jpg").into(otra);
 
                                     break;
                                 case "5":
-
+                                    // otra.setImageBitmap(madrid5);
                                     Picasso.with(getApplicationContext()).load("http://media.biocalorimetry.org/2015/11/luftaufnahme_01_Basel.jpg").into(otra);
 
                                     break;
                                 case "6":
-
+                                    //otra.setImageBitmap(madrid6);
                                     Picasso.with(getApplicationContext()).load("https://www.fcb.ch/getmedia/de945923-6f3c-4894-a7cc-d51a4d0f0d99/fcbasel").into(otra);
 
                                     break;
                                 case "7":
-
-                                    Picasso.with(getApplicationContext()).load("http://fminside.net/uploads/monthly_2016_04/basel-logo.png.0c977527e0a0097778e2ab9893b10fc3.png").into(otra);
+                                    //otra.setImageBitmap(madrid7);
+                                    Picasso.with(getApplicationContext()).load("https://unsplash.com/photos/g-ofB0rb1Uw").into(otra);
 
                                     break;
                                 case "8":
-
-                                    Picasso.with(getApplicationContext()).load("http://www.roche.com/dam/jcr:7e8de406-d8fc-492c-a005-ddde60d64048/en/bau1_aussen_370px.jpg").into(otra);
+                                    //otra.setImageBitmap(madrid8);
+                                    Picasso.with(getApplicationContext()).load("https://es.wikipedia.org/wiki/Basilea#/media/File:Basel_rathaus.jpg").into(otra);
 
                                     break;
                                 default:
@@ -463,7 +463,7 @@ public class EuropaPartida extends AppCompatActivity {
                             break;
                         case "6":
 
-                            Picasso.with(getApplicationContext()).load("http://www.barcelonabook.com/uploads/9/2/8/1/9281695/5823663_orig.jpg").into(otra);
+                            Picasso.with(getApplicationContext()).load("https://static.pexels.com/photos/51358/pexels-photo-51358.jpeg").into(otra);
 
                             break;
                         case "7":
@@ -522,7 +522,7 @@ public class EuropaPartida extends AppCompatActivity {
                                     break;
                                 case "6":
 
-                                    Picasso.with(getApplicationContext()).load("http://www.barcelonabook.com/uploads/9/2/8/1/9281695/5823663_orig.jpg").into(otra);
+                                    Picasso.with(getApplicationContext()).load("https://static.pexels.com/photos/51358/pexels-photo-51358.jpeg").into(otra);
 
                                     break;
                                 case "7":
@@ -578,12 +578,12 @@ public class EuropaPartida extends AppCompatActivity {
                             break;
                         case "3":
 
-                            Picasso.with(getApplicationContext()).load("http://mevoyalmundo.com/wp-content/uploads/2015/05/dublin-low-cost.jpg").into(otra);
+                            Picasso.with(getApplicationContext()).load("https://static.pexels.com/photos/6634/art-graffiti-wall-dublin.jpg").into(otra);
 
                             break;
                         case "4":
 
-                            Picasso.with(getApplicationContext()).load("http://www.mevoyadublin.com/hs-fs/hubfs/citywallpaperhd.com-265.jpg?t=1487351588668&width=2127&name=citywallpaperhd.com-265.jpg").into(otra);
+                            Picasso.with(getApplicationContext()).load("https://static.pexels.com/photos/6631/ireland-saint-patrick-s-day.jpg").into(otra);
 
                             break;
                         case "5":
@@ -637,12 +637,12 @@ public class EuropaPartida extends AppCompatActivity {
                                     break;
                                 case "3":
 
-                                    Picasso.with(getApplicationContext()).load("http://mevoyalmundo.com/wp-content/uploads/2015/05/dublin-low-cost.jpg").into(otra);
+                                    Picasso.with(getApplicationContext()).load("https://static.pexels.com/photos/6634/art-graffiti-wall-dublin.jpg").into(otra);
 
                                     break;
                                 case "4":
 
-                                    Picasso.with(getApplicationContext()).load("http://www.mevoyadublin.com/hs-fs/hubfs/citywallpaperhd.com-265.jpg?t=1487351588668&width=2127&name=citywallpaperhd.com-265.jpg").into(otra);
+                                    Picasso.with(getApplicationContext()).load("https://static.pexels.com/photos/6631/ireland-saint-patrick-s-day.jpg").into(otra);
 
                                     break;
                                 case "5":
@@ -850,7 +850,7 @@ public class EuropaPartida extends AppCompatActivity {
                             break;
                         case "6":
 
-                            Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/23/00/39/architecture-1851496_960_720.jpg").into(otra);
+                            Picasso.with(getApplicationContext()).load("https://static.pexels.com/photos/615343/notre-dame-paris-france-615343.jpeg").into(otra);
 
                             break;
                         case "7":
@@ -908,7 +908,7 @@ public class EuropaPartida extends AppCompatActivity {
                                     break;
                                 case "6":
 
-                                    Picasso.with(getApplicationContext()).load("https://cdn.pixabay.com/photo/2016/11/23/00/39/architecture-1851496_960_720.jpg").into(otra);
+                                    Picasso.with(getApplicationContext()).load("https://static.pexels.com/photos/615343/notre-dame-paris-france-615343.jpeg").into(otra);
 
                                     break;
                                 case "7":

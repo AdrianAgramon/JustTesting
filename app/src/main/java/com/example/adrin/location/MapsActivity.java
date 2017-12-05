@@ -218,20 +218,13 @@ public class MapsActivity extends FragmentActivity implements
 
     @Override public void onMapClick(LatLng puntoPulsado) {
 
-
         mapa.clear();
-
         Marker mark = mapa.addMarker(new MarkerOptions().position(puntoPulsado)
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
 
-
-
         final LatLng Marcador1 = new LatLng( puntoPulsado.latitude , puntoPulsado.longitude);
         Marker2=Marcador1;
-
-
-
 
 
     }

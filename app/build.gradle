@@ -39,4 +39,5 @@ dependencies {
     compile 'com.github.jgabrielfreitas:BlurImageView:1.0.1'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.specyci:residemenu:1.6'
 }

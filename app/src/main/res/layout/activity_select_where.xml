@@ -35,7 +35,8 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/asiaButton2"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="0dp" />
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints,UnknownId" />
 
             <Button
                 android:id="@+id/oceaniaButton2"
@@ -49,7 +50,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/africaButton2"
-                tools:layout_editor_absoluteX="0dp" />
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints,UnknownId" />
 
             <Button
                 android:id="@+id/asiaButton2"
@@ -63,7 +65,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/oceaniaButton2"
-                tools:layout_editor_absoluteX="0dp" />
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints,UnknownId" />
 
             <Button
                 android:id="@+id/africaButton2"
@@ -77,7 +80,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/famousButton2"
-                tools:layout_editor_absoluteX="0dp" />
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints,UnknownId" />
 
             <Button
                 android:id="@+id/famousButton2"
@@ -91,7 +95,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/button5"
-                tools:layout_editor_absoluteX="0dp" />
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints,UnknownId" />
 
             <Button
                 android:id="@+id/button5"
@@ -102,7 +107,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/button6"
-                tools:layout_editor_absoluteX="132dp" />
+                tools:layout_editor_absoluteX="132dp"
+                tools:ignore="MissingConstraints" />
 
             <Button
                 android:id="@+id/button6"
@@ -114,7 +120,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="-8dp" />
+                tools:layout_editor_absoluteX="-8dp"
+                tools:ignore="MissingConstraints" />
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
