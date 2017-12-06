@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         itemSettings = new ResideMenuItem(this, R.drawable.icon_settings, "Settings");
 
         itemLogOut = new ResideMenuItem(this, R.drawable.icon_logout, "Logout");
-        itemAmigos = new ResideMenuItem(this, R.drawable.ic_people, "Avisos");
+        itemAmigos = new ResideMenuItem(this, R.drawable.ic_people, "Amigos");
 
         itemHome.setOnClickListener(this);
         itemProfile.setOnClickListener(this);
@@ -104,9 +104,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if (view == itemSettings){
             changeFragment(new SettingsFragment());
         }else if (view == itemLogOut) {
-            changeFragment(new AmigosFragment());
-        }else if (view == itemAmigos) {
             changeFragment(new LogOutFragment());
+        }else if (view == itemAmigos) {
+            changeFragment(new AmigosFragment());
         }
         resideMenu.closeMenu();
     }

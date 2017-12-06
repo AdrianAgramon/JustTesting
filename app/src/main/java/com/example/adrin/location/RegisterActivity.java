@@ -82,13 +82,17 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }else {
 
+                    String nivel;
+                    double puntuacion;
                     Usuario user = new Usuario(
 
                             username2.getText().toString(),
                             password2.getText().toString(),
                             pais.getText().toString(),
                             email.getText().toString(),
-                            nombre.getText().toString()
+                            nombre.getText().toString(),
+                            nivel = "Bebé",
+                            puntuacion = 0
 
                     );
 
